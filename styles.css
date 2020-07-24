@@ -29,7 +29,7 @@ body {margin:0; background-color:var(--background-color);}
   --text-box-hover: rgba(255, 255, 250, 0.8);
 
 /**FONT**/
-  --font: didot;
+  --font: didot, "Palatino Linotype", "Book Antiqua", Palatino, serif;
   --font-color: black;
   --font-color-secondary: rgb(100, 100, 100);
   --font-color-pale: rgb(100, 100, 100);
@@ -81,6 +81,21 @@ body {margin:0; background-color:var(--background-color);}
     #header:hover .header-link-buttons{margin-top:var(--header-height); -webkit-transition:0.5s;}
     .header-link-buttons:hover, .header-link-buttons:active{color:var(--link-color-hover); background-color:var(--header-background-color);}
     .dividers{height:100%; border-right-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
+       
+
+#mobile-menu {display:none; position:fixed; cursor:pointer; float:left; vertical-align:center; height:42px; margin:calc(var(--header-height) / 2 - 21px); z-index: 11;}
+@media screen and (max-width: 768px) { #mobile-menu {display: block;} }
+
+.bar1, .bar2, .bar3 {width: 36px; height: 6px; background-color: #333; margin: 6px 0; transition: 0.4s;}
+/* Rotate first bar */
+.change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 9px) ; transform: rotate(-45deg) translate(-9px, 9px) ;}
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+/* Rotate last bar */
+.change .bar3 {-webkit-transform: rotate(45deg) translate(-8px, -8px) ; transform: rotate(45deg) translate(-8px, -8px) ;}
+
+.change #header{box-shadow: 0px -10px 0px var(--background-color); height:var(--header-hover-height); -webkit-transition:1s; overflow:hidden; background-color:var(--secondary-color);}
+
     
     .title{color:var(--font-color-secondary); font-family: var(--font); font-size:var(--header-font-size); text-align:center; line-height:var(--header-height); text-decoration:none;}
     .body-text{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color)}
@@ -99,13 +114,18 @@ body {margin:0; background-color:var(--background-color);}
     
     .page-title{padding-top:calc(var(--block-height) / 4); padding-bottom:calc(var(--block-height) / 8); color:var(--font-color-pale); font-family: var(--font); font-size:var(--page-title-font-size); text-align:center; text-shadow: 2px 2px 7px var(--background-hover-color);}
     
-    .portfolio-block{display:flex; flex-flow:row wrap; justify-content:center; background-color:var(--background-color); width:var(--block-width); max-width:var(--block-max-width); padding-top:var(--portfolio-block-padding); padding-bottom:var(--portfolio-block-padding); text-align:center; border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); vertical-align:middle; overflow:hidden; position:relative; z-index:5;}
+    .portfolio-block{display:flex; flex-flow:row wrap; align-items:center; justify-content:center; background-color:var(--background-color); width:var(--block-width); max-width:var(--block-max-width); padding-top:var(--portfolio-block-padding); padding-bottom:var(--portfolio-block-padding); text-align:center; border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); vertical-align:middle; overflow:hidden; position:relative; z-index:5;}
     .portfolio-container{width:25%; height:relative; float:center;}
     .portfolio-container-wide{width:50%; height:relative; float:center;}
     .portfolio-container-full-width{width:100%; height:relative; float:center;}
     .portfolio-image{margin:var(--portfolio-padding); width:calc(100% - var(--portfolio-padding) - var(--portfolio-padding)); height:relative;}
     .portfolio-text-box{background-color:var(--secondary-color); border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); padding:20px; margin:var(--portfolio-padding);}
-    
+    @media only screen and (max-width: 768px) { /* For mobile phones: */
+      [class*="portfolio-container"] {width: 50%;}
+      [class*="portfolio-container-wide"] {width: 100%;}
+      [class*="portfolio-container-full-width"] {width: 100%;}
+    }
+
     .contact-links{color:var(--font-color-secondary); font-size:var(--font-size); font-family: var(--font); text-decoration:none; text-align:center; padding-bottom:40px; -webkit-transition:1s;}
     .contact-links:hover, .contact-links:active{color:var(--link-color-hover); -webkit-transition:1s;}
     
