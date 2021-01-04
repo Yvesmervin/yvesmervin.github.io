@@ -77,7 +77,7 @@ body {margin:0; background-color:var(--background-color);}
     #header-title{text-shadow: 2px 2px 7px var(--background-hover-color); width:100%; height:var(--header-height); background-color:var(--background-color); position:fixed; text-align:center; border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); -webkit-transition:1s;}
     #header:hover #header-title{text-shadow: 2px 2px 30px var(--font-color-secondary); width:100%; background-color:var(--header-background-color); -webkit-transition:1s;}
     .header-title{color:var(--font-color); font-family: var(--font); font-size:var(--header-font-size); text-align:center; line-height:var(--header-height); z-index:10; text-decoration:none;}
-    .header-link-buttons{color:var(--header-font-color); font-family: var(--font); font-size:var(--header-link-font-size); margin-top:50px; -webkit-transition:1s; text-decoration:none; padding-left:20px; padding-right:20px; line-height:var(--header-link-height);}
+    .header-link-buttons{color:var(--header-font-color); font-family: var(--font); font-size:var(--header-link-font-size); margin-top:50px; -webkit-transition:1s; text-decoration:none; padding-left:30px; padding-right:30px; line-height:var(--header-link-height);}
     .block-align-header-links{height:100%; display:flex; align-items:center; justify-content:center; z-index:9; overflow:hidden;}
     #header:hover .header-link-buttons{margin-top:var(--header-height); -webkit-transition:0.5s;}
     .header-link-buttons:hover, .header-link-buttons:active{color:var(--link-color-hover); background-color:var(--header-background-color);}
