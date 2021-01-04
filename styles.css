@@ -102,6 +102,7 @@ body {margin:0; background-color:var(--background-color);}
     .body-text{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color)}
     .secondary-text{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color-secondary);}
     .body-title{font-size:var(--title-font-size); font-family: var(--font); text-decoration:none; color:var(--font-color);}
+    .vertical-align-text{position:relative; top:50%; transform:translateY(-50%); align:center;}
     
     
     .block{background-color:var(--background-color); width:var(--block-width); max-width:var(--block-max-width); height:var(--block-height); text-align:center; border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); vertical-align:middle; overflow:hidden; position:relative; z-index:5;}
@@ -117,26 +118,31 @@ body {margin:0; background-color:var(--background-color);}
     
     .portfolio-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--portfolio-block-width); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5;}
     .portfolio-container{width:25%; overflow:hidden; display:flex; align-items:stretch;}
+    .portfolio-container-third{width:33.33%; overflow:hidden; display:flex; align-items:stretch;}
     .portfolio-container-wide{width:50%; overflow:hidden; display:flex; align-items:stretch;}
     .portfolio-container-full-width{width:100%; overflow:hidden; display:flex; align-items:stretch;}
     .portfolio-image{margin:var(--portfolio-padding); width:calc(100% - var(--portfolio-padding) - var(--portfolio-padding)); height:auto;}
     .portfolio-text-box{width:100%; background-color:var(--secondary-color); text-align:center; overflow:hidden; border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); padding:10%; height:auto; margin:calc(var(--portfolio-padding) + var(--portfolio-padding));}
-    .vertical-align-text{position:relative; top:50%; transform:translateY(-50%); align:center;}
+    
     @media only screen and (max-width: 768px) { /* For mobile phones: */
       [class*="portfolio-container"] {width: 50%;}
+      [class*="portfolio-container-third"] {width: 100%;}
       [class*="portfolio-container-wide"] {width: 100%;}
       [class*="portfolio-container-full-width"] {width: 100%;}
-      [class*="portfolio-block"] {width: 100%;}
       [class*="body-title"] {font-size: calc(var(--title-font-size) / 2);}
       [class*="secondary-text"] {font-size: calc(var(--font-size) - 5);}
     }
-    .divider{border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); width:90%; margin: auto;}
+    @media only screen and (max-width: 1000px) { /* For mobile phones: */
+      [class*="portfolio-block"] {width: 100%;}
+    }
+    
+    .divider{border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); width:90%; margin: auto; z-index:21;}
     
     .collection-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--block-width); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5;}
 
     .contact-links{color:var(--font-color-secondary); font-size:var(--font-size); font-family: var(--font); text-decoration:none; text-align:center; padding-bottom:40px; -webkit-transition:1s;}
     .contact-links:hover, .contact-links:active{color:var(--link-color-hover); -webkit-transition:1s;}
     
-    #footer{width:100%; position:fixed; height:var(--footer-height); background-color:var(--background-color); z-index:-1; text-align:center; bottom:0px;}
+    #footer{width:100%; position:fixed; height:var(--footer-height); background-color:var(--background-color); z-index:0; text-align:center; bottom:0px;}
     .footer-links{color:var(--footer-font-color); font-size:var(--footer-font-size); font-family: var(--font); text-decoration:none; text-align:center; padding-left:20px; padding-right:20px; -webkit-transition:1s;}
     .footer-links:hover, .footer-links:active{color:var(--link-color-hover); -webkit-transition:1s;}
