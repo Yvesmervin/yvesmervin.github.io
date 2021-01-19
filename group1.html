@@ -13,7 +13,7 @@
 
 <style>
     body{background-color:rgb(43, 43, 43);}
-    #header{box-shadow: 0px 0px 30px rgb(43, 43, 43); background-color:rgb(43, 43, 43);}
+    #header{box-shadow: 0px 0px 30px rgb(0, 0, 0); background-color:rgb(43, 43, 43);}
     #header:hover, #header:active{box-shadow: 0px -10px 0px rgb(43, 43, 43); background-color:rgb(0, 0, 0);}
     #header-title{background-color:rgb(74, 74, 74); text-shadow: 2px 2px 7px rgb(0, 0, 0);}
     #header:hover #header-title{background-color:rgb(43, 43, 43); text-shadow: 2px 2px 30px rgb(0, 0, 0);}
@@ -33,9 +33,10 @@
 
 <div id="header">
     <div id="header-title">
+        <button class="mobile-menu-button" onclick="menuActive()">Menu</button>
         <a class="header-title" href="/index.html">Yves-Valentin</a>
     </div>
-    <div class="block-align-header-links">
+    <div id="block-align-header-links">
         <a class="dividers"></a>
     <a class="header-link-buttons" href="/portfolio.html">Portfolio</a>
         <a class="dividers"></a>
@@ -54,7 +55,18 @@
     </div>
 </div>
 
-<div style="height:var(--header-height);"></div>
+<script>
+    function menuActive() {
+  var x = document.getElementById("block-align-header-links");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<div class="header-spacer"></div>
 
 <div class="block-align-center">
        <a class="page-title">Escher</a>
@@ -145,7 +157,7 @@
         <div class="portfolio-text-box">
             <div class="vertical-align-text">
                 <a class="body-title">Escher Cross-Body Bag<br></a>
-                <a class="secondary-text">Dimensional pattern of retro-reflective glass beads in clear acrylic stenciled on iridescent painted lambskin.<br>
+                <a class="secondary-text">Dimensional retro-reflective pattern of glass beads in clear acrylic stenciled on iridescent painted lambskin.<br>
                 Detachable and adjustable strap for comfort and ease of use.</a>
             </div>
         </div>

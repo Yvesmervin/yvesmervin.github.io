@@ -11,6 +11,9 @@
 <meta name="author" content="Yves Mervin-Leroy">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+   .page-title{padding-top:calc(var(--block-height) / 4); padding-bottom:calc(var(--block-height) / 8);
+</style>
 </head>
 
 
@@ -18,9 +21,10 @@
 
 <div id="header">
     <div id="header-title">
+        <button class="mobile-menu-button" onclick="menuActive()">Menu</button>
         <a class="header-title" href="/index.html">Yves-Valentin</a>
     </div>
-    <div class="block-align-header-links">
+    <div id="block-align-header-links">
         <a class="dividers"></a>
     <a class="header-link-buttons" href="/portfolio.html">Portfolio</a>
         <a class="dividers"></a>
@@ -39,7 +43,18 @@
     </div>
 </div>
 
-<div style="height:var(--header-height);"></div>
+<script>
+    function menuActive() {
+  var x = document.getElementById("block-align-header-links");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<div class="header-spacer"></div>
 
 <div class="block-align-center">
    <a class="page-title">Contact</br></a>

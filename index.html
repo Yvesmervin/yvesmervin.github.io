@@ -18,19 +18,10 @@
 
 <div id="header">
     <div id="header-title">
-        <div id="mobile-menu" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <script>
-function myFunction(x) {
-  x.classList.toggle("change");
-}
-</script>
+        <button class="mobile-menu-button" onclick="menuActive()">Menu</button>
         <a class="header-title" href="/index.html">Yves-Valentin</a>
     </div>
-    <div class="block-align-header-links">
+    <div id="block-align-header-links">
         <a class="dividers"></a>
     <a class="header-link-buttons" href="/portfolio.html">Portfolio</a>
         <a class="dividers"></a>
@@ -49,7 +40,18 @@ function myFunction(x) {
     </div>
 </div>
 
-<div style="height:var(--header-height);"></div>
+<script>
+    function menuActive() {
+  var x = document.getElementById("block-align-header-links");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<div class="header-spacer"></div>
 
 <div class="block">
     <div class="block-align-center">
