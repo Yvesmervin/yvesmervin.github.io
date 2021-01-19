@@ -14,9 +14,7 @@
 <style>
     body{background-color:rgb(255, 247, 247);}
     #header{box-shadow: 0px 0px 30px rgb(145, 128, 128); background-color:rgb(255, 247, 247);}
-    #header:hover, #header:active{box-shadow: 0px -10px 0px rgb(255, 247, 247); background-color:rgb(255, 235, 235);}
     #header-title{background-color:rgb(255, 235, 235); text-shadow: 2px 2px 7px rgb(255, 204, 204); color: rgb(145, 128, 128);}
-    #header:hover #header-title{background-color:rgb(255, 247, 247); text-shadow: 2px 2px 30px rgb(255, 204, 204);}
     .header-link-buttons:hover, .header-link-buttons:active{background-color:rgb(255, 204, 204);}
     .portfolio-block {background-color:rgb(255, 247, 247);}
     .page-title {color:rgb(145, 128, 128); text-shadow: 2px 2px 7px rgb(255, 204, 204);}
@@ -26,6 +24,11 @@
     .mobile-menu-button{background-color:rgb(255, 235, 235); border-color:black;}
     .mobile-menu-button:hover{background-color:rgb(255, 247, 247);}
     #block-align-header-links{background-color:rgb(255, 235, 235);}
+    
+    @media only screen and (min-width: 769px) { /*for desktop*/
+    #header:hover, #header:active{box-shadow: 0px -10px 0px rgb(255, 247, 247); background-color:rgb(255, 235, 235);}
+    #header:hover #header-title{background-color:rgb(255, 247, 247); text-shadow: 2px 2px 30px rgb(255, 204, 204);}
+    }
 </style>
 
 </head>
@@ -35,7 +38,7 @@
 
 <div id="header">
     <div id="header-title">
-        <button class="mobile-menu-button" onclick="menuActive()">Menu</button>
+        <button id="mobile-menu-button" onclick="menuActive(); mobileButtonActive()">Menu</button>
         <a class="header-title" href="/index.html">Yves-Valentin</a>
     </div>
     <div id="block-align-header-links">
@@ -58,12 +61,29 @@
 </div>
 
 <script>
+  document.getElementById("mobile-menu-button").style.backgroundColor = "rgb(255, 247, 247)";
+  document.getElementById("mobile-menu-button").style.borderColor = "var(--accent-color-2)";
+  
     function menuActive() {
+      showMenu();
+      changeButton();  //code
+    }
+    function showMenu() {
   var x = document.getElementById("block-align-header-links");
-  if (x.style.display === "none") {
-    x.style.display = "flex";
+  if (x.style.marginTop === "var(--web-header-height)") {
+    x.style.marginTop = "0px";
   } else {
-    x.style.display = "none";
+    x.style.marginTop = "var(--web-header-height)";
+  }
+}
+    function changeButton() {
+  var x = document.getElementById("mobile-menu-button");
+  if (x.style.backgroundColor === "rgb(255, 235, 235)") {
+    x.style.backgroundColor = "rgb(255, 247, 247)";
+    x.style.borderColor = "var(--accent-color-2)";
+  } else {
+    x.style.backgroundColor = "rgb(255, 235, 235)";
+    x.style.borderColor = "black";
   }
 }
 </script>
