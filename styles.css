@@ -75,7 +75,7 @@ body {margin:0; background-color:var(--background-color);}
   --web-title-font-size: 20px;
   --web-portfolio-block-padding: 20px;
   --web-header-height: 50px;
-  --web-header-link-height: 25px;
+  --web-header-link-height: 40px;
   --web-header-hover-height: 75px;
   --web-header-font-size: 25px;
   
@@ -107,7 +107,7 @@ body {margin:0; background-color:var(--background-color);}
       
       .header-link-buttons:hover, .header-link-buttons:active{color:var(--link-color-hover); background-color:var(--header-background-color); -webkit-transition:1s;}
       .dividers{height:var(--web-header-link-height); border-right-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
-      .mobile-menu-button{position: absolute; left: 0px; height: 30px; margin: 10px; padding-left:15px; padding-right:15px; background-color:var(--secondary-color); border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); font-family:var(--font); -webkit-transition:0.5s;}
+      .mobile-menu-button{position: absolute; left: 0px; height: 30px; margin: 10px; padding-left:15px; padding-right:15px; background-color:var(--secondary-color); border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); font-family:var(--font); font-size:var(--web-font-size); -webkit-transition:0.5s;}
       .mobile-menu-button:hover{color:var(--link-color-hover); background-color:var(--header-background-color); -webkit-transition:0.5s;}
       .mobile-menu-button input {opacity: 0; width: 0; height: 0;}
       .header-spacer{height:var(--web-header-height);}
