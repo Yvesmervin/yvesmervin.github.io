@@ -13,8 +13,8 @@
 
 <style>
     body{background-color:rgb(43, 43, 43);}
-    #header{box-shadow: 0px 0px 30px rgb(0, 0, 0); background-color:rgb(43, 43, 43);}
-    #header-title{background-color:rgb(74, 74, 74); text-shadow: 2px 2px 7px rgb(0, 0, 0);}
+    #header{box-shadow: 0px 0px 30px rgb(0, 0, 0); background-color:rgb(43, 43, 43); border-color:var(--accent-color);}
+    #header-title{background-color:rgb(74, 74, 74); text-shadow: 2px 2px 7px rgb(0, 0, 0); border-color:var(--accent-color);}
     .header-link-buttons:hover, .header-link-buttons:active{background-color:rgb(74, 74, 74);}
     .dividers{border-color:black;}
     .collection-block {background-color:rgb(43, 43, 43);}
@@ -25,6 +25,9 @@
     .mobile-menu-button{background-color:rgb(74, 74, 74); border-color:black;}
     .mobile-menu-button:hover{background-color:rgb(43, 43, 43);}
     #block-align-header-links{background-color:rgb(43, 43, 43);}
+    .portfolio-image{box-shadow: 2px 2px 4px black;}
+    .portfolio-text-box{box-shadow: 2px 2px 4px black;}
+    .divider{border-color:black;}
     
     @media only screen and (min-width: 769px) { /*for desktop*/
     #header:hover, #header:active{box-shadow: 0px -10px 0px rgb(43, 43, 43); background-color:rgb(0, 0, 0);}
@@ -64,7 +67,7 @@
 <script>
   document.getElementById("mobile-menu-button").style.backgroundColor = "rgb(74, 74, 74)";
   document.getElementById("mobile-menu-button").style.borderColor = "black";
-  
+
     function menuActive() {
       showMenu();
       changeButton();  //code
