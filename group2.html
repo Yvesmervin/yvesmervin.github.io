@@ -88,6 +88,23 @@
 }
 </script>
 
+<script> //menu dissapears on scroll
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (window.pageYOffset < 200) {
+    document.getElementById("header").style.top = "0";
+  }
+  else if (prevScrollpos < currentScrollPos) {
+    document.getElementById("header").style.top = "-150px";
+    document.getElementById("block-align-header-links").style.marginTop = "0px";
+  } else {
+  document.getElementById("header").style.top = "0";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
 <div id="footer">
 <div class="block-align-center">
     <a class="footer-links" href="mailto:y.mervin.leroy@gmail.com">E-Mail</a>

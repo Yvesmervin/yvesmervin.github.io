@@ -41,7 +41,7 @@
     </div>
 </div>
 
-<script>
+<script>//menu button code
     function menuActive() {
       showMenu();
       changeButton();  //code
@@ -63,6 +63,23 @@
     x.style.backgroundColor = "var(--header-background-color)";
     x.style.borderColor = "black";
   }
+}
+</script>
+
+<script> //menu dissapears on scroll
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (window.pageYOffset < 200) {
+    document.getElementById("header").style.top = "0";
+  }
+  else if (prevScrollpos < currentScrollPos) {
+    document.getElementById("header").style.top = "-150px";
+    document.getElementById("block-align-header-links").style.marginTop = "0px";
+  } else {
+  document.getElementById("header").style.top = "0";
+  }
+  prevScrollpos = currentScrollPos;
 }
 </script>
 
