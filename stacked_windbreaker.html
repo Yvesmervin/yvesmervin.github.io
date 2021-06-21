@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+
+<link rel="stylesheet" href="styles.css">
+
+<meta name="description" content="Yves-Valentin Design">
+<meta name="keywords" content="fashion, fashion design, couture, portfolio">
+<meta name="author" content="Yves Mervin-Leroy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+
+
+<div id="header">
+    <div id="header-title">
+        <button id="mobile-menu-button" onclick="menuActive(); mobileButtonActive()">Menu</button>
+        <a class="header-title" href="/index.html">Yves-Valentin</a>
+    </div>
+    <div id="block-align-header-links">
+        <a class="dividers"></a>
+    <a class="header-link-buttons" href="/portfolio.html">Portfolio</a>
+        <a class="dividers"></a>
+    <a class="header-link-buttons" href="/about.html">About</a>
+        <a class="dividers"></a>
+    <a class="header-link-buttons" href="/contact.html">Contact</a>
+        <a class="dividers"></a>
+        <!--<a class="dividers"></a>
+    <a class="header-link-buttons" href="var(--fourth-menu-link)">
+        Link 4
+    </a>
+        <a class="dividers"></a>
+    <a class="header-link-buttons" href="var(--fifth-menu-link)">
+        Link 5
+    </a>-->
+    </div>
+</div>
+
+<script>//menu button code
+    function menuActive() {
+      showMenu();
+      changeButton();  //code
+    }
+    function showMenu() {
+  var x = document.getElementById("block-align-header-links");
+  if (x.style.marginTop === "var(--web-header-height)") {
+    x.style.marginTop = "0px";
+  } else {
+    x.style.marginTop = "var(--web-header-height)";
+  }
+}
+    function changeButton() {
+  var x = document.getElementById("mobile-menu-button");
+  if (x.style.backgroundColor === "var(--header-background-color)") {
+    x.style.backgroundColor = "var(--secondary-color)";
+    x.style.borderColor = "var(--accent-color-2)";
+  } else {
+    x.style.backgroundColor = "var(--header-background-color)";
+    x.style.borderColor = "black";
+  }
+}
+</script>
+
+<script> //menu dissapears on scroll
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (window.pageYOffset < 200) {
+    document.getElementById("header").style.top = "0";
+  }
+  else if (prevScrollpos < currentScrollPos) {
+    document.getElementById("header").style.top = "-150px";
+    document.getElementById("block-align-header-links").style.marginTop = "0px";
+  } else {
+  document.getElementById("header").style.top = "0";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+<div id="footer">
+<div class="block-align-center">
+    <a class="footer-links" href="mailto:y.mervin.leroy@gmail.com">E-Mail</a>
+    <a class="footer-links" href="https://www.instagram.com/yvesmervin/">Instagram</a>
+    <a class="footer-links" href="tel:+16464672596">Phone</a>
+</div>
+</div>
+
+<!--<script>
+window.onscroll = function() {
+    var bodyHeight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+        if (bodyHeight <= $(window).height() + $(window).scrollTop() - 150)
+        {document.getElementById("footer").style.display = "block";}
+        else
+        {document.getElementById("footer").style.display = "none";}
+    };
+</script>-->
+
+<div class="header-spacer"></div>
+
+<div class="block-align-center">
+       <a class="page-title">Stacked Windbreaker</a>
+</div>
+
+<div class="gallery-block">
+   <div class="gallery-half-block" style="margin-top:300px; margin-left:-100px;">
+          <div class="gallery-text">
+        <div class="vertical-align-text">
+              <a class="body-title">Stacked Windbreaker<br></a>
+              <a class="secondary-text">A modern take on a classic element; layered gunflaps and <br> rainshields bring volume to this microsuede windbreaker. <br> Drawstring hems allow for customization of fit.</a>
+          </div>
+        </div>
+   </div>
+   <div class="gallery-half-block" style="margin-top:100px;">
+        <img class="gallery-image" src="https://live.staticflickr.com/65535/51252977185_f1a8cfe18d_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+   </div>
+   <div class="gallery-full-block"> 
+      <img class="gallery-image" style="margin-right:20%;" src="https://live.staticflickr.com/65535/51251935086_278b4dfd47_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+   </div>
+   <div class="gallery-third-block">
+          <div class="gallery-text">
+        <div class="vertical-align-text">
+              <a class="body-title">Windbreaker Details<br></a>
+              <a class="secondary-text">The detachable hood is fastened with snaps. <br> Cargo pockets are reinterpreted as geomteric shapes.</a>
+          </div>
+        </div>
+   </div>
+   <div class="gallery-third-block" style="padding-bottom:0px;"> 
+      <img class="gallery-image" src="https://live.staticflickr.com/65535/51251205252_999b4b7589_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+   </div>
+   <div class="gallery-third-block" style="padding-top:0px;"> 
+      <img class="gallery-image" src="https://live.staticflickr.com/65535/51252132603_46f7753bb8_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+   </div>
+   <div class="gallery-half-block"> 
+      <img class="gallery-image" src="https://live.staticflickr.com/65535/51251205292_703bd14a13_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+   </div>
+   <div class="gallery-half-block" style="margin-top:100px;"> 
+      <img class="gallery-image" src="https://live.staticflickr.com/65535/51251205392_9fe1107c7e_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+   </div>
+   
+  <!-- <div class="gallery-half-block">
+      <div class="gallery-vertical-half">
+        <img class="gallery-image-half" src="https://live.staticflickr.com/65535/50483333322_b62f569223_k.jpg" alt="Crocodile Embossed Leather and Shearling Jacket">
+        <img class="gallery-image-half" src="https://live.staticflickr.com/65535/50483333322_b62f569223_k.jpg" alt="Crocodile Embossed Leather and Shearling Jacket">
+      </div>
+      <div class="gallery-vertical-half">
+        <div class="vertical-align-text">
+          <div class="gallery-text">
+              <a class="body-title">Silk Windbreaker<br></a>
+              <a class="secondary-text">This silk charmeuse jacket draws inspiration from 80s nylon windbreakers with their bold patterns and colors.</a>
+          </div>
+        </div>
+      </div>
+   </div>-->
+</div>
+
+<div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
+
+
+
+</body>
+
+
+
+</html>
