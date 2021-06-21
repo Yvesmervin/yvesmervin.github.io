@@ -185,6 +185,12 @@ body {margin:0; background-color:var(--background-color);}
     .gallery-image-half{width: 40%; margin:2%; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .gallery-text{width:80%; background-color:var(--secondary-color); padding:5%; margin:5%; height:auto; box-shadow: 2px 2px 4px var(--background-hover-color);}
     
+    .gallery-item{width:80%; height:var(--block-height);}
+    /*.gallery-item:hover {width:84%; margin-top:0%; margin-bottom:0%;box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:1s;}*/
+    .gallery-item-image{height:500px; margin-bottom:30px; margin-top:30px; box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
+    .gallery-item-image:hover{height:530px; margin-bottom:15px; margin-top:15px; box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:1s;}
+    .gallery-item-title{vertical-align:bottom; width:90%; background-color:var(--secondary-color); padding:5%; height:auto; box-shadow: 2px 2px 4px var(--background-hover-color);}
+    
 
     .collection-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:calc(var(--block-width)-4px); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); margin-left: 2px; margin-right: 2px; text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5;
     border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width);}
