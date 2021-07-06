@@ -83,7 +83,7 @@ body {margin:0; background-color:var(--background-color);}
 
   }
 
-  @media only screen and (min-width: 769px) { /* For desktop: */
+  @media (pointer:fine) { /* For desktop: */
     #header{box-shadow: 0px 0px 30px var(--background-hover-color); width:100%; position:fixed; height:var(--header-height); background-color:var(--secondary-color); -webkit-transition:1s; /**text-align:bottom;**/ border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); z-index:10;}
     #header:hover, #header:active{box-shadow: 0px -10px 0px var(--background-color); height:var(--header-hover-height); -webkit-transition:1s; overflow:hidden; background-color:var(--secondary-color);}
     #header-title{text-shadow: 2px 2px 7px var(--background-hover-color); width:100%; height:var(--header-height); background-color:var(--background-color); position:fixed; text-align:center; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); -webkit-transition:1s;}
@@ -98,7 +98,7 @@ body {margin:0; background-color:var(--background-color);}
     .header-spacer{height:var(--header-height);}
   }
 
-    @media only screen and (max-width: 768px) { /* For mobile phones: */
+   @media (pointer:none) { /* For mobile phones: */
       #header{box-shadow: 0px 0px 30px var(--background-hover-color); width:100%; position:fixed; height:var(--web-header-height); background-color:var(--secondary-color); -webkit-transition:1s; /**text-align:bottom;**/ border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); z-index:10;}
       #header-title{text-shadow: 2px 2px 7px var(--background-hover-color); width:100%; height:var(--web-header-height); background-color:var(--background-color); position:fixed; text-align:center; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); -webkit-transition:1s;}
       .header-title{color:var(--font-color); font-family: var(--font); font-size:var(--web-header-font-size); text-align:center; line-height:var(--web-header-height); z-index:10; text-decoration:none;}
@@ -176,34 +176,39 @@ body {margin:0; background-color:var(--background-color);}
     }
 
 @media only screen and (min-width: 769px) { /* For desktop: */
-    .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--portfolio-block-width); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5;}
-    .gallery-full-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-half-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-third-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-quarter-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 4); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--portfolio-block-width); max-width:var(--block-max-width); text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5;}
+    .gallery-full-block{display:flex; padding-top:65%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-half-block{display:flex; padding-top:55%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-third-block{display:flex; padding-top:35%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-quarter-block{display:flex; padding-top:26%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 4); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
     .gallery-vertical-half{width:100%; height:50%;}
     .gallery-image{height:auto; width:80%; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .gallery-image-half{height:auto; width:40%; margin:2%; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .gallery-text{width:80%; background-color:var(--secondary-color); padding:5%; margin:5%; height:auto; box-shadow: 2px 2px 4px var(--background-hover-color);}
 }
 
-@media only screen and (max-width: 768px) { /* For mobile phones: */
-    .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--portfolio-block-width); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5;}
-    .gallery-full-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-half-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-third-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-quarter-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+@media only screen and (max-width: 768px) { /* For portrait mobile phones: */
+    .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:100%; text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5;}
+    .gallery-full-block{display:flex; padding-top:65%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-half-block{display:flex; padding-top:55%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-third-block{display:flex; padding-top:35%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-quarter-block{display:flex; padding-top:55%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
     .gallery-vertical-half{width:100%; height:50%;}
     .gallery-image{height:auto; width:80%; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .gallery-image-half{height:auto; width:40%; margin:2%; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .gallery-text{width:80%; background-color:var(--secondary-color); padding:5%; margin:5%; height:auto; box-shadow: 2px 2px 4px var(--background-hover-color);}
 }
-    .gallery-item{width:80%; height:var(--block-height);}
+
+    .gallery-item{width:80%; position:absolute; top:0;}
     /*.gallery-item:hover {width:84%; margin-top:0%; margin-bottom:0%;box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:1s;}*/
-    .gallery-item-image{height:500px; margin-bottom:30px; margin-top:30px; box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
-    .gallery-item-image:hover{height:530px; margin-bottom:15px; margin-top:15px; box-shadow: 6px 6px 12px var(--background-hover-color); -webkit-transition:1s;}
-    .gallery-item-title{vertical-align:bottom; width:90%; background-color:var(--secondary-color); padding:5%; height:auto; box-shadow: 2px 2px 4px var(--background-hover-color);}
-
+    /*.gallery-item-image{height:500px; margin-bottom:30px; margin-top:30px; box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
+    .gallery-item-image:hover{height:530px; margin-bottom:15px; margin-top:15px; box-shadow: 6px 6px 12px var(--background-hover-color); -webkit-transition:1s;}*/
+    .gallery-item-image{height:auto; width:90%; margin-top:5%; box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
+    .gallery-item:hover .gallery-item-image{width:100%; margin-top:0%; box-shadow: 6px 6px 12px var(--background-hover-color); -webkit-transition:1s;}
+    .gallery-item-title{pointer-events: none; transform:translateY(-150%); margin-left:5%; margin-right:5%; background-color:var(--text-box-color); padding-top:5%; padding-bottom:5%; -webkit-transition:0.5s;}
+    .gallery-item:hover .gallery-item-title{margin-left:0%; margin-right:0%; -webkit-transition:1s;}
+    .gallery-link{height:0px; width:0px;}
+    
     .collection-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:calc(var(--block-width)-4px); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); margin-left: 2px; margin-right: 2px; text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5;
     border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width);}
 
