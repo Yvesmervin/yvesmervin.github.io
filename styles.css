@@ -119,8 +119,8 @@ body {margin:0; background-color:var(--background-color);}
     .body-text{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color)}
     }
     @media (pointer:coarse) { /* For mobile phones: */
-    .body-title{font-size:var(--title-font-size); line-height:0.5; font-family: var(--font); text-decoration:none; color:var(--font-color);}
-    .body-text{font-size:var(--font-size); line-height:0.5; font-family: var(--font); text-decoration:none; color:var(--font-color)}
+    .body-title{font-size:var(--title-font-size); text-size-adjust: none; font-family: var(--font); text-decoration:none; color:var(--font-color);}
+    .body-text{font-size:var(--font-size); text-size-adjust: none; font-family: var(--font); text-decoration:none; color:var(--font-color)}
     }
 
     .block{background-color:var(--background-color); width:var(--block-width); max-width:var(--block-max-width); height:var(--block-height); text-align:center; border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); vertical-align:middle; overflow:hidden; position:relative; z-index:5;}
