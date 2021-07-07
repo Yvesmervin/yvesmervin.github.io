@@ -110,26 +110,18 @@ body {margin:0; background-color:var(--background-color);}
       #mobile-menu-button input {opacity: 0; width: 0; height: 0;}
       .header-spacer{height:var(--web-header-height);}
     }
-    
-    @media only screen and (max-width: 1400px and orientation:landscape) { /* For mobile phones: */
-      #header{box-shadow: 0px 0px 30px var(--background-hover-color); width:100%; position:fixed; height:var(--web-header-height); background-color:var(--secondary-color); -webkit-transition:1s; /**text-align:bottom;**/ border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); z-index:10;}
-      #header-title{text-shadow: 2px 2px 7px var(--background-hover-color); width:100%; height:var(--web-header-height); background-color:var(--background-color); position:fixed; text-align:center; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); -webkit-transition:1s;}
-      .header-title{color:var(--font-color); font-family: var(--font); font-size:var(--web-header-font-size); text-align:center; line-height:var(--web-header-height); z-index:10; text-decoration:none;}
-      .header-link-buttons{color:var(--header-font-color); font-family: var(--font); font-size:var(--web-font-size); text-decoration:none; padding-left:15px; padding-right:15px; line-height:var(--web-header-link-height); -webkit-transition:1s;}
-      #block-align-header-links {background-color:var(--secondary-color); display:flex;  height:var(--web-header-link-height); align-items:center; justify-content:center; z-index:9; overflow:hidden; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); -webkit-transition:1s;}
-      .header-link-buttons:hover, .header-link-buttons:active{color:var(--link-color-hover); background-color:var(--header-background-color); -webkit-transition:1s;}
-      .dividers{height:var(--web-header-link-height); border-right-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
-      #mobile-menu-button{position: absolute; cursor: pointer; left: 0px; height: 30px; margin: 10px; padding-left:15px; padding-right:15px; background-color:var(--secondary-color); border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); font-family:var(--font); font-size:var(--web-font-size); -webkit-transition:0.5s;}
-      #mobile-menu-button input {opacity: 0; width: 0; height: 0;}
-      .header-spacer{height:var(--web-header-height);}
-    }
 
     .title{color:var(--font-color-secondary); font-family: var(--font); font-size:var(--header-font-size); text-align:center; line-height:var(--header-height); text-decoration:none;}
-    .body-text{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color)}
     .secondary-text{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color-secondary);}
-    .body-title{font-size:var(--title-font-size); font-family: var(--font); text-decoration:none; color:var(--font-color);}
     .vertical-align-text{position:relative; top:50%; transform:translateY(-50%); align:center;}
-
+    @media (pointer:fine) { /* For desktop: */
+    .body-title{font-size:var(--title-font-size); font-family: var(--font); text-decoration:none; color:var(--font-color);}
+    .body-text{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color)}
+    }
+    @media (pointer:coarse) { /* For mobile phones: */
+    .body-title{font-size:var(--title-font-size); line-height:1; font-family: var(--font); text-decoration:none; color:var(--font-color);}
+    .body-text{font-size:var(--font-size); line-height:1; font-family: var(--font); text-decoration:none; color:var(--font-color)}
+    }
 
     .block{background-color:var(--background-color); width:var(--block-width); max-width:var(--block-max-width); height:var(--block-height); text-align:center; border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); vertical-align:middle; overflow:hidden; position:relative; z-index:5;}
     .flexible-block{display:inline-block; background-color:var(--background-color); width:var(--block-width); max-width:var(--block-max-width); height: max-content; min-height:var(--block-height); text-align:center; border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width); vertical-align:middle; overflow:hidden; position:relative; z-index:5;}
