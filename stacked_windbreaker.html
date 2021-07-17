@@ -107,35 +107,35 @@ window.onscroll = function() {
 </div>
 
 <div class="gallery-block">
-   <div class="gallery-half-block">
+   <div class="gallery-half-block" style="min-height:250px;">
     <div class="gallery-item-text">
       <a class="body-title">Stacked Windbreaker<br></a>
       <a class="secondary-text">A modern take on a classic element; layered gunflaps and rainshields bring volume to this microsuede windbreaker. Drawstring hems allow for customization of fit.</a>
     </div>
    </div>
    <div class="gallery-half-block" style="margin-top:100px;">
-        <img class="gallery-item-image" src="https://live.staticflickr.com/65535/51252977185_f1a8cfe18d_o.jpg" alt="Layered microsuede windbreaker">
+        <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51252977185_f1a8cfe18d_o.jpg" alt="Layered microsuede windbreaker">
    </div>
    <div class="gallery-full-block"> 
-      <img class="gallery-item-image" style="margin-right:20%;" src="https://live.staticflickr.com/65535/51251935086_278b4dfd47_o.jpg" alt="Layered microsuede windbreaker">
+      <img class="gallery-item-image" onclick="modalfunction(this)" style="margin-right:20%;" src="https://live.staticflickr.com/65535/51251935086_278b4dfd47_o.jpg" alt="Layered microsuede windbreaker">
    </div>
-   <div class="gallery-third-block" style="padding-top:35%;">
+   <div class="gallery-third-block" style="padding-top:0%; min-height:250px;">
     <div class="gallery-item-text" style="top:10%; width:80%; left:2.5%;;">
       <a class="body-title">Windbreaker Details<br></a>
       <a class="secondary-text">The detachable hood is fastened with snaps. <br> Cargo pockets are reinterpreted as geomteric shapes.</a>
     </div>
    </div>
    <div class="gallery-third-block" style="margin-top:10%;">
-      <img class="gallery-item-image" src="https://live.staticflickr.com/65535/51251205252_999b4b7589_o.jpg" alt="Layered microsuede windbreaker">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51251205252_999b4b7589_o.jpg" alt="Layered microsuede windbreaker">
    </div>
    <div class="gallery-third-block" style="margin-top:20%;"> 
-      <img class="gallery-item-image" src="https://live.staticflickr.com/65535/51252132603_46f7753bb8_o.jpg" alt="Layered microsuede windbreaker">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51252132603_46f7753bb8_o.jpg" alt="Layered microsuede windbreaker">
    </div>
    <div class="gallery-half-block"> 
-      <img class="gallery-item-image" src="https://live.staticflickr.com/65535/51251205292_703bd14a13_o.jpg" alt="Layered microsuede windbreaker">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51251205292_703bd14a13_o.jpg" alt="Layered microsuede windbreaker">
    </div>
    <div class="gallery-half-block" style="margin-top:100px; padding-bottom:10%;"> 
-      <img class="gallery-item-image" src="https://live.staticflickr.com/65535/51295914779_ed36fa03cb_o.jpg" alt="Layered microsuede windbreaker">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51295914779_ed36fa03cb_o.jpg" alt="Layered microsuede windbreaker">
    </div>
    
   <!-- <div class="gallery-half-block">
@@ -153,6 +153,28 @@ window.onscroll = function() {
       </div>
    </div>-->
 </div>
+
+<!-- MODAL -->
+<div id="my-modal" class="modal">
+    <span class="close" onclick="modal.style.display = 'none'">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+<script>
+  var modal = document.getElementById('my-modal');
+  var modalImg = document.getElementById("modal-image");
+  
+  function modalfunction(el) {
+    var ImgSrc = el.src;
+    var altText = el.alt;
+    modal.style.display = "block";
+    modalImg.src = ImgSrc;
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+</script>
 
 <div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
 

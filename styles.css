@@ -197,6 +197,38 @@ body {margin:0; background-color:var(--background-color);}
     .gallery-item-image{position:absolute; top:0; margin-top:5%; margin-bottom:5%; height:auto; width:80%; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .gallery-item-text{position:absolute; display:flex; flex-direction:column; top:30%; transform:translateX(-2.5%); background-color:var(--secondary-color); padding:5%; margin:5%; text-align:center; height:auto; box-shadow: 2px 2px 4px var(--background-hover-color);}
     
+/* MODAL */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--text-box-color); /* Black w/ opacity */
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  margin-top:5vh;
+  max-width: 100%;
+  max-height: 90vh;
+  box-shadow: 2px 2px 4px var(--background-hover-color);
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: var(--font-color-pale);
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+    $("#bar").find('div.section:empty').hide(); 
+    
     .collection-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:calc(var(--block-width)-4px); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); margin-left: 2px; margin-right: 2px; text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5;
     border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width);}
 
