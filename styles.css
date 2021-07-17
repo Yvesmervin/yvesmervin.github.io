@@ -156,6 +156,7 @@ body {margin:0; background-color:var(--background-color);}
       [class*="portfolio-container-third"] {width: 100%;}
       /*[class*="portfolio-container-wide"] {width: 100%;}*/
       [class*="portfolio-container-full-width"] {width: 100%;}
+      [class*="portfolio-container-force-expand"] {width: 100%;}
       [class*="portfolio-image"] {margin:2px; width: calc(100% - 4px); height: auto;}
       [class*="portfolio-image-box"] {margin:0px; width: auto;}
       [class*="portfolio-text-box"] {padding: 3%; margin: 2px;}
