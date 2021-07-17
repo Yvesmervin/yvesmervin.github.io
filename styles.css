@@ -145,7 +145,8 @@ body {margin:0; background-color:var(--background-color);}
     .portfolio-container-wide{width:50%; overflow:hidden; display:flex; align-items:stretch; heihgt:auto;}
     .portfolio-container-full-width{width:100%; overflow:hidden; display:flex; align-items:stretch;}
     .portfolio-image-box{height:auto; padding-bottom:0px; margin:0px;}
-    .portfolio-image{margin:var(--portfolio-padding); width:calc(100% - var(--portfolio-padding) - var(--portfolio-padding)); height:auto; vertical-align: bottom; box-shadow: 2px 2px 4px var(--background-hover-color);}
+    .portfolio-image{-webkit-transition:1s; margin:var(--portfolio-padding); width:calc(100% - var(--portfolio-padding) - var(--portfolio-padding)); height:auto; vertical-align: bottom; box-shadow: 2px 2px 4px var(--background-hover-color);}
+    .portfolio-image:hover{-webkit-transition:1s; opacity:0.7;}
     /*.portfolio-text-box{width:100%; background-color:var(--secondary-color); text-align:center; overflow:hidden; border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); padding:10%; height:auto; margin:calc(var(--portfolio-padding) + var(--portfolio-padding));}*/
     .portfolio-text-box{margin:var(--portfolio-padding); width:calc(100% - var(--portfolio-padding) - var(--portfolio-padding)); height:auto; background-color:var(--secondary-color); text-align:center; overflow:hidden; border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); padding:10%; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .divider{display:block; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); width:80%; margin: auto;}
@@ -170,18 +171,18 @@ body {margin:0; background-color:var(--background-color);}
 /*GALLERY MENU*/
 @media only screen and (min-width: 769px) { /* For desktop: */
     .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--portfolio-block-width); max-width:var(--block-max-width); text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5;}
-    .gallery-twothirds-block{display:flex; padding-top:70%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3 * 2); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-third-block{display:flex; padding-top:35%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-quarter-block{display:flex; padding-top:26%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 4); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-twothirds-block{display:flex; padding-top:70%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3 * 2); text-align:center; vertical-align:middle; position:relative; z-index:5}
+    .gallery-third-block{display:flex; padding-top:35%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3); text-align:center; vertical-align:middle; position:relative; z-index:5}
+    .gallery-quarter-block{display:flex; padding-top:26%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 4); text-align:center; vertical-align:middle; position:relative; z-index:5}
 }
 @media only screen and (max-width: 768px) { /* For portrait mobile phones: */
     .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:100%; text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5;}
-    .gallery-twothirds-block{display:flex; padding-top:120%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-third-block{display:flex; padding-top:120%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-quarter-block{display:flex; padding-top:55%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-twothirds-block{display:flex; padding-top:120%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; position:relative; z-index:5}
+    .gallery-third-block{display:flex; padding-top:120%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; position:relative; z-index:5}
+    .gallery-quarter-block{display:flex; padding-top:55%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; position:relative; z-index:5}
 }
-    .gallery-full-block{display:flex; padding-top:65%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
-    .gallery-half-block{display:flex; padding-top:55%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5}
+    .gallery-full-block{display:flex; padding-top:65%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; position:relative; z-index:5}
+    .gallery-half-block{display:flex; padding-top:55%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; position:relative; z-index:5}
     .gallery-vertical-half{width:100%; height:50%;}
 
     .gallery-unit{width:80%; position:absolute; top:0;}
@@ -194,7 +195,8 @@ body {margin:0; background-color:var(--background-color);}
     
 /*GALLERY INDIVIDUAL PAGES*/
     
-    .gallery-item-image{position:absolute; top:0; margin-top:5%; margin-bottom:5%; height:auto; width:80%; box-shadow: 2px 2px 4px var(--background-hover-color);}
+    .gallery-item-image{position:absolute; top:0; margin-top:5%; margin-bottom:5%; height:auto; width:80%; box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:1s;}
+    .gallery-item-image:hover{transform: scale(1.05); -webkit-transition:1s;}
     .gallery-item-text{position:absolute; display:flex; flex-direction:column; top:30%; transform:translateX(-2.5%); background-color:var(--secondary-color); padding:5%; margin:5%; text-align:center; height:auto; box-shadow: 2px 2px 4px var(--background-hover-color);}
     
 /* MODAL */

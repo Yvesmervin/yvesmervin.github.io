@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+
+<link rel="stylesheet" href="styles.css">
+
+<meta name="description" content="Yves-Valentin Design">
+<meta name="keywords" content="fashion, fashion design, couture, portfolio">
+<meta name="author" content="Yves Mervin-Leroy">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+</head>
+
+
+<body>
+
+<div id="header">
+    <div id="header-title">
+        <button id="mobile-menu-button" onclick="menuActive(); mobileButtonActive()">Menu</button>
+        <a class="header-title" href="/index.html">Yves-Valentin</a>
+    </div>
+    <div id="block-align-header-links">
+        <a class="dividers"></a>
+    <a class="header-link-buttons" href="/portfolio_menu.html">Gallery</a>
+        <a class="dividers"></a>
+    <a class="header-link-buttons" href="/about.html">About</a>
+        <a class="dividers"></a>
+    <a class="header-link-buttons" href="/contact.html">Contact</a>
+        <a class="dividers"></a>
+    <a class="header-link-buttons" href="/portfolio.html">Portfolio</a>
+        <a class="dividers"></a>
+        <!--<a class="dividers"></a>
+    <a class="header-link-buttons" href="var(--fifth-menu-link)">
+        Link 5
+    </a>-->
+    </div>
+</div>
+
+<script>
+  document.getElementById("mobile-menu-button").style.backgroundColor = "rgb(255, 247, 247)";
+  document.getElementById("mobile-menu-button").style.borderColor = "var(--accent-color-2)";
+
+    function menuActive() {
+      showMenu();
+      changeButton();  //code
+    }
+    function showMenu() {
+  var x = document.getElementById("block-align-header-links");
+  if (x.style.marginTop === "var(--web-header-height)") {
+    x.style.marginTop = "0px";
+  } else {
+    x.style.marginTop = "var(--web-header-height)";
+  }
+}
+    function changeButton() {
+  var x = document.getElementById("mobile-menu-button");
+  if (x.style.backgroundColor === "rgb(255, 235, 235)") {
+    x.style.backgroundColor = "rgb(255, 247, 247)";
+    x.style.borderColor = "var(--accent-color-2)";
+  } else {
+    x.style.backgroundColor = "rgb(255, 235, 235)";
+    x.style.borderColor = "black";
+  }
+}
+</script>
+
+<script> //menu dissapears on scroll
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (window.pageYOffset < 200) {
+    document.getElementById("header").style.top = "0";
+  }
+  else if (prevScrollpos < currentScrollPos) {
+    document.getElementById("header").style.top = "-150px";
+    document.getElementById("block-align-header-links").style.marginTop = "0px";
+  } else {
+  document.getElementById("header").style.top = "0";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+<div id="footer">
+<div class="block-align-center">
+    <a class="footer-links" href="mailto:y.mervin.leroy@gmail.com">E-Mail</a>
+    <a class="footer-links" href="https://www.instagram.com/yvesvalentinnyc/">Instagram</a>
+    <a class="footer-links" href="tel:+16464672596">Phone</a>
+</div>
+</div>
+
+<div class="header-spacer"></div>
+
+<div class="block-align-center">
+       <a class="page-title">Senior Thesis</a>
+</div>
+
+<div class="divider"></div>
+
+<div class="portfolio-block"> <!--Look 1-->
+    <div class="portfolio-container-wide">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191824918_6dea75bc31_k.jpg" alt="Embossed leather set">
+        </div>
+    </div>
+    <div class="portfolio-container-wide">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192673080_55a64524b8_k.jpg" alt="Embossed leather set">
+        </div>
+    </div>
+
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192379049_74fae541f7_k.jpg" alt="Embossed leather set">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-text-box">
+            <div class="vertical-align-text">
+                <a class="body-title">Embossed Leather Set<br></a>
+                <a class="secondary-text">Oversized lambskin bomber jacket and mini skirt embossed with custom geometric pattern.</br>
+                Slot seams add additional mobility to jacket and conceal front pockets.</br>
+                Motif is reinterpreted as charmeuse intarsia suspended in nude chiffon for the shirt.</a>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192673065_17f1fae854_k.jpg" alt="Embossed leather set">
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-block"> <!--Look 3-->
+    <div class="portfolio-container-full-width">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51190902932_44c239e7ef_o.jpg" alt="Embossed velvet jacket">
+        </div>
+    </div>
+    
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191612616_bb2efe7e49_k.jpg" alt="Embossed velvet jacket">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-text-box">
+            <div class="vertical-align-text">
+                <a class="body-title">Embossed Liquid Metal Jacket<br></a>
+                <a class="secondary-text">Embossed velvet bomber jacket with signature "Y" pattern finished with drawstring cuffs and hem.</br>
+                Partially lined linen pants with sheer stripe and mesh tanktop finished with bias cut raw silk.</a>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192382559_8e11c11218_k.jpg" alt="Embossed velvet jacket">
+
+        </div>
+    </div>
+    
+    <div class="portfolio-container-wide">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191828363_808e056ce3_k.jpg" alt="Embossed velvet jacket">
+        </div>
+    </div>
+    <div class="portfolio-container-wide">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192382594_c701409993_k.jpg" alt="Embossed velvet jacket">
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-block"><!--Look 2-->
+    <div class="portfolio-container-wide">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192377659_cd4c38986d_k.jpg" alt="Embossed bias cut velvet dress">
+        </div>
+    </div>
+    <div class="portfolio-container-wide">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192377649_1271824d47_k.jpg" alt="Embossed bias cut velvet dress">
+        </div>
+    </div>
+    
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192377579_e6ac2d960f_k.jpg" alt="Embossed bias cut velvet dress">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-text-box">
+            <div class="vertical-align-text">
+                <a class="body-title">Embossed Bias-Cut Velvet Dress<br></a>
+                <a class="secondary-text">Open-back dress with detachable and reconfigureable straps for custom fit.</br>
+                Velvet embossed with signature "Y" pattern and lined with bias-cut charmeuse.</a>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191607731_3dbe91f348_k.jpg" alt="Embossed bias cut velvet dress">
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-block"><!--Bag-->
+    <div class="portfolio-container-wide">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191013462_25b30466e3_k.jpg" alt="Glass stenciled crossbody leather bag">
+        </div>
+    </div>
+    <div class="portfolio-container-wide">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191041467_a1b5206aee_o.jpg"  alt="Glass stenciled crossbody leather bag">
+        </div>
+    </div>
+    <div class="portfolio-container-full-width">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191750821_298dec9d8f_o.jpg" alt="Glass stenciled crossbody leather bag">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51193316206_19ef7e0290_o.jpg" alt="Glass stenciled crossbody leather bag">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-text-box">
+            <div class="vertical-align-text">
+                <a class="body-title">Retro-Reflective Crossbody Bag<br></a>
+                <a class="secondary-text">Dimensional retro-reflective pattern of glass beads in clear acrylic stenciled on iridescent painted lambskin.<br>
+                Strap is detachable and adjustable for comfort and ease of use.</a>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51194096004_cbb48b5039_o.jpg" alt="Glass stenciled crossbody leather bag">
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-block"><!--Look 2&3-->
+    <div class="portfolio-container-full-width">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191921723_7e8595d6c2_o.jpg" alt="Embossed velvet jacket and dress">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51190901727_a7956d961d_k.jpg" alt="Embossed velvet jacket and dress">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-text-box">
+            <div class="vertical-align-text">
+                <a class="body-title">Mix & Match<br></a>
+                <a class="secondary-text">All the pieces in this collection are designed with the intention of being recombined in any number of ways.</a>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51192381314_e9b792f8f5_k.jpg" alt="Embossed velvet jacket and dress">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51193568223_54c80f79c8_o.jpg" alt="Mix and match pieces">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51193586638_16c68cd215_o.jpg" alt="Mix and match pieces">
+        </div>
+    </div>
+    <div class="portfolio-container-third">
+        <div class="portfolio-image-box">
+            <img class="portfolio-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51191827208_3a895637fc_k.jpg" alt="Embossed velvet jacket and dress">
+        </div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div id="my-modal" class="modal">
+    <span class="close" onclick="modal.style.display = 'none'">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+<script>
+  var modal = document.getElementById('my-modal');
+  var modalImg = document.getElementById("modal-image");
+  
+  function modalfunction(el) {
+    var ImgSrc = el.src;
+    var altText = el.alt;
+    modal.style.display = "block";
+    modalImg.src = ImgSrc;
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+</script>
+
+<div style="height:var(--footer-height)"></div> <!--PADDING FOR FOOTER-->
+
+</body>
+
+
+
+</html>
