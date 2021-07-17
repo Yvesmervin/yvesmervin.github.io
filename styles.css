@@ -172,7 +172,7 @@ body {margin:0; background-color:var(--background-color);}
 /*GALLERY MENU*/
 @media only screen and (min-width: 769px) { /* For desktop: */
     .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--portfolio-block-width); max-width:var(--block-max-width); text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5;}
-    .gallery-twothirds-block{display:flex; padding-top:70%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3 * 2); text-align:center; vertical-align:middle; position:relative; z-index:5}
+    .gallery-twothirds-block{display:flex; padding-top:80%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3 * 2); text-align:center; vertical-align:middle; position:relative; z-index:5}
     .gallery-third-block{display:flex; padding-top:35%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 3); text-align:center; vertical-align:middle; position:relative; z-index:5}
     .gallery-quarter-block{display:flex; padding-top:26%; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0; background-color:var(--background-color); width:calc(var(--gallery-block-width) / 4); text-align:center; vertical-align:middle; position:relative; z-index:5}
 }
