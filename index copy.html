@@ -13,19 +13,17 @@
 <meta name="author" content="Yves Mervin-Leroy">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<script src="jquery.js"></script> 
-    <script> 
-    $(function(){
-      $("#headerFooter").load("headerfooter.html"); 
-    });
-</script>
-
 </head>
 
 
 <body>
 
-<div id="headerFooter"></div>
+<?php include '/headerfooter.html';?>
+
+<?php
+require($DOCUMENT_ROOT . "/headerfooter.html");
+?>
+
 
 <div class="flexible-block">
     <div class="block-align-center">
