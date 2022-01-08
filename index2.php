@@ -18,7 +18,7 @@
 
 
 <body>
-<?php echo 'test';?>
+<?php echo 'testtest';?>
 <?php include 'header_and_footer.php';?>
 
 
