@@ -1,3 +1,5 @@
+<?php
+echo '
 <div id="header">
     <div id="header-title">
         <button id="mobile-menu-button" onclick="menuActive(); mobileButtonActive()">Menu</button>
@@ -75,3 +77,5 @@ var currentScrollPos = window.pageYOffset;
 <div class="header-spacer"></div>
 
 <div style="height:var(--footer-height)"></div> <!--PADDING FOR FOOTER-->
+';
+?>
