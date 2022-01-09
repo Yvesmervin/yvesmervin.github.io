@@ -99,7 +99,7 @@ body {margin:0; background-color:var(--background-color);}
   }
 
    @media (pointer:coarse) { /* For mobile phones: */
-      #header{box-shadow: 0px 0px 30px var(--background-hover-color); width:100%; position:fixed; height:var(--web-header-height); background-color:var(--secondary-color); -webkit-transition:1s; /**text-align:bottom;**/ border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); z-index:10;}
+      #header,#header-embed{box-shadow: 0px 0px 30px var(--background-hover-color); width:100%; position:fixed; height:var(--web-header-height); background-color:var(--secondary-color); -webkit-transition:1s; /**text-align:bottom;**/ border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); z-index:10;}
       #header-title{text-shadow: 2px 2px 7px var(--background-hover-color); width:100%; height:var(--web-header-height); background-color:var(--background-color); position:fixed; text-align:center; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); -webkit-transition:1s;}
       .header-title{color:var(--font-color); font-family: var(--font); font-size:var(--web-header-font-size); text-align:center; line-height:var(--web-header-height); z-index:10; text-decoration:none;}
       .header-link-buttons{color:var(--header-font-color); font-family: var(--font); font-size:var(--web-font-size); text-decoration:none; padding-left:10px; padding-right:10px; line-height:var(--web-header-link-height); -webkit-transition:1s;}
