@@ -78,7 +78,7 @@ body {margin:0; background-color:var(--background-color);}
   --web-portfolio-block-padding: 20px;
   --web-header-height: 50px;
   --web-header-link-height: 40px;
-  --web-header-hover-height: 75px;
+  --web-header-hover-height: 100px;
   --web-header-font-size: 25px;
 
   }
