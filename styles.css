@@ -96,7 +96,7 @@ body {margin:0; background-color:var(--background-color);}
     .dividers{height:100%; border-right-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
     #mobile-menu-button{display:none;}
     .header-spacer{height:var(--header-height);}
-    #header-embed{width:100%; position:fixed; height:var(--header-hover-height); margin-bottom:-var(--header-link-height); opacity:0; z-index:10;}
+    #header-embed{width:100%; position:fixed; height:var(--header-hover-height); margin-bottom:-var(--header-link-height); background-color:rgba(0,0,0,0); z-index:10;}
   }
 
    @media (pointer:coarse) { /* For mobile phones: */
