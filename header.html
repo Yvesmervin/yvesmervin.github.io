@@ -31,13 +31,13 @@
   }
   function showMenu() {
     var x = document.getElementById("block-align-header-links");
-    var embed = document.getElementById("header-embed");
+    var h = document.getElementById("header");
     if (x.style.marginTop === "var(--web-header-height)") {
       x.style.marginTop = "0px";
-      embed.style.marginTop = "0px";
+      h.style.marginTop = "0px";
     } else {
       x.style.marginTop = "var(--web-header-height)";
-      embed.style.marginTop = "var(--web-header-height)";
+      h.style.marginTop = "var(--web-header-height)";
     }
   }
   function changeButton() {
