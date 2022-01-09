@@ -20,7 +20,7 @@ body {margin:0; background-color:var(--background-color);}
   --fourtht-picture: ;*/
 
 /**BACKGROUND COLORS**/
-  --background-color: rgb(255, 255, 250);
+  --background-color: red;
   --secondary-color: rgb(250, 250, 245);
   --background-hover-color: rgb(220, 220, 215);
   --accent-color: black;
