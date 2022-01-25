@@ -202,7 +202,7 @@ body {margin:0; background-color:var(--background-color);}
       .gallery-unit-image:hover{opacity:0.7; transform: scale(1.05); -webkit-transition:1s;}
     }
     @media (pointer:coarse) { /* For mobile phones: */
-      .gallery-unit-title{position:absolute; bottom:0; width:80%; background-color:var(--text-box-color); padding-top:5%; padding-bottom:5%; pointer-events:none;}
+      .gallery-unit-title{position:absolute; bottom:0; width:80%; margin:10%; background-color:var(--text-box-color); padding-top:3%; padding-bottom:3%; pointer-events:none;}
     }
 /*GALLERY INDIVIDUAL PAGES*/
     
