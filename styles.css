@@ -41,12 +41,12 @@ body {margin:0; background-color:var(--background-color);}
   --link-color-hover: black;
 
 /**HEADER**/
-  --header-height: 100px;
+  --header-height: 75px;
   --header-link-height: 50px;
-  --header-hover-height: 150px; /**add header & link height**/
+  --header-hover-height: 115px; /**add header & link height**/
   --header-background-color: rgb(240, 240, 235);
   --header-font-color: rgb(94, 94, 94);
-  --header-font-size: 50px;
+  --header-font-size: 40px;
   --header-link-font-size: 20px;
   --header-link-static: ;
 
@@ -78,7 +78,7 @@ body {margin:0; background-color:var(--background-color);}
   --web-portfolio-block-padding: 20px;
   --web-header-height: 50px;
   --web-header-link-height: 40px;
-  --web-header-hover-height: 50px;
+  --web-header-hover-height: 75px;
   --web-header-font-size: 25px;
 
   }
@@ -148,7 +148,7 @@ body {margin:0; background-color:var(--background-color);}
     .portfolio-container-full-width{width:100%; overflow:hidden; display:flex; align-items:stretch;}
     .portfolio-image-box{height:auto; padding-bottom:0px; margin:0px;}
     .portfolio-image{-webkit-transition:1s; margin:var(--portfolio-padding); width:calc(100% - var(--portfolio-padding) - var(--portfolio-padding)); height:auto; vertical-align: bottom; box-shadow: 2px 2px 4px var(--background-hover-color);}
-    .portfolio-image:hover{-webkit-transition:1s; opacity:0.7;}
+    .portfolio-image:hover{-webkit-transition:0.7s; opacity:0.7; transform: scale(1.01);}
     /*.portfolio-text-box{width:100%; background-color:var(--secondary-color); text-align:center; overflow:hidden; border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); padding:10%; height:auto; margin:calc(var(--portfolio-padding) + var(--portfolio-padding));}*/
     .portfolio-text-box{margin:var(--portfolio-padding); width:calc(100% - var(--portfolio-padding) - var(--portfolio-padding)); height:auto; background-color:var(--secondary-color); text-align:center; overflow:hidden; border-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); padding:10%; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .divider{display:block; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); width:80%; margin: auto;}
@@ -217,7 +217,7 @@ body {margin:0; background-color:var(--background-color);}
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: var(--text-box-color); /* Black w/ opacity */
+  background-color: var(--text-box-color);
 }
 .modal-content {
   margin: auto;
