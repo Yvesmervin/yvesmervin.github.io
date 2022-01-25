@@ -19,63 +19,7 @@
 
 <body>
 
-<div id="header">
-    <div id="header-title">
-        <button id="mobile-menu-button" onclick="menuActive(); mobileButtonActive()">Menu</button>
-        <a class="header-title" href="/index.html">Yves-Valentin</a>
-    </div>
-    <div id="block-align-header-links">
-        <a class="dividers"></a>
-    <a class="header-link-buttons" href="/index.html">Home</a>
-        <a class="dividers"></a>
-    <a class="header-link-buttons" href="/gallery.html">Gallery</a>
-        <a class="dividers"></a>
-    <a class="header-link-buttons" href="/about.html">About</a>
-        <a class="dividers"></a>
-    <a class="header-link-buttons" href="/contact.html">Contact</a>
-        <a class="dividers"></a>
-    <a class="header-link-buttons" href="/portfolio.html">Portfolio</a>
-        <a class="dividers"></a>
-        <!--<a class="dividers"></a>
-    <a class="header-link-buttons" href="var(--fifth-menu-link)">
-        Link 5
-    </a>-->
-    </div>
-</div>
-
-<script>
-    function menuActive() {
-      showMenu();
-      changeButton();  //code
-    }
-    function showMenu() {
-  var x = document.getElementById("block-align-header-links");
-  if (x.style.marginTop === "var(--web-header-height)") {
-    x.style.marginTop = "0px";
-  } else {
-    x.style.marginTop = "var(--web-header-height)";
-  }
-}
-    function changeButton() {
-  var x = document.getElementById("mobile-menu-button");
-  if (x.style.backgroundColor === "var(--header-background-color)") {
-    x.style.backgroundColor = "var(--secondary-color)";
-    x.style.borderColor = "var(--accent-color-2)";
-  } else {
-    x.style.backgroundColor = "var(--header-background-color)";
-    x.style.borderColor = "black";
-  }
-}
-</script>
-
-<div id="footer">
-<div class="block-align-center">
-    <a class="footer-links" href="mailto:y.mervin.leroy@gmail.com">E-Mail</a>
-    <a class="footer-links" href="https://www.instagram.com/yvesmervin/">Instagram</a>
-    <a class="footer-links" href="tel:+16464672596">Phone</a>
-</div>
-</div>
-
+<embed type="text/html" src="header.html" id="header-embed">
 <div class="header-spacer"></div>
 
 <div class="block-align-center">
@@ -91,7 +35,8 @@
     <a class="contact-links" href="https://www.instagram.com/yvesmervin/">Instagram</br>@yvesmervin</a>
 </div>
 
-<div style="height:var(--footer-height)"></div> <!--PADDING FOR FOOTER-->
+<div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
+<embed type="text/html" src="footer.html" id="footer">
 
 </body>
 
