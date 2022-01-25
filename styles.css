@@ -32,7 +32,7 @@ body {margin:0; background-color:var(--background-color);}
   --font: didot, "Palatino Linotype", "Book Antiqua", Palatino, serif;
   --font-color: black;
   --font-color-secondary: rgb(100, 100, 100);
-  --font-color-pale: rgb(100, 100, 100);
+  --font-color-link: rgb(51, 51, 51);
   --font-size: 15px;
   --title-font-color: rgb(58, 58, 58);
   --title-font-size: 30px;
@@ -115,6 +115,8 @@ body {margin:0; background-color:var(--background-color);}
 
     .title{color:var(--font-color-secondary); font-family: var(--font); font-size:var(--header-font-size); text-align:center; line-height:var(--header-height); text-decoration:none;}
     .secondary-text{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color-secondary);}
+    .text-link{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color-link); font-weight: bold; -webkit-transition:0.7s;}
+    .text-link:hover, .text-link:active {color:var(--link-color-hover); -webkit-transition:0.7s;}
     .vertical-align-text{position:relative; top:50%; transform:translateY(-50%); align:center;}
     @media (pointer:fine) { /* For desktop: */
     .body-title{font-size:var(--title-font-size); font-family: var(--font); text-decoration:none; color:var(--font-color);}
@@ -138,7 +140,7 @@ body {margin:0; background-color:var(--background-color);}
     .menu-video{min-height:var(--block-height); z-index:3; height:100%; object-fit:cover; width:100%; pointer-events:none; top:0%; }
     /*.block:hover .menu-image{height:600px;}*/
 
-    .page-title{padding-top:calc(var(--block-height) / 8); padding-bottom:calc(var(--block-height) / 16); color:var(--font-color-pale); font-family: var(--font); font-size:var(--page-title-font-size); text-align:center; text-shadow: 2px 2px 7px var(--background-hover-color);}
+    .page-title{padding-top:calc(var(--block-height) / 8); padding-bottom:calc(var(--block-height) / 16); color:var(--font-color-secondary); font-family: var(--font); font-size:var(--page-title-font-size); text-align:center; text-shadow: 2px 2px 7px var(--background-hover-color);}
 
     .portfolio-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--portfolio-block-width); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5;
         border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
@@ -200,7 +202,7 @@ body {margin:0; background-color:var(--background-color);}
       .gallery-unit-image:hover{opacity:0.7; transform: scale(1.05); -webkit-transition:1s;}
     }
     @media (pointer:coarse) { /* For mobile phones: */
-      .gallery-unit-title{position:absolute; bottom:0; width:100%; background-color:var(--text-box-color); padding-top:5%; padding-bottom:5%; pointer-events:none; width:100%; -webkit-transition:0.5s;}
+      .gallery-unit-title{position:absolute; bottom:0; width:80%; background-color:var(--text-box-color); padding-top:5%; padding-bottom:5%; pointer-events:none;}
     }
 /*GALLERY INDIVIDUAL PAGES*/
     
@@ -234,7 +236,7 @@ body {margin:0; background-color:var(--background-color);}
   top: 15px;
   right: 35px;
   z-index:21;
-  color: var(--font-color-pale);
+  color: var(--font-color-secondary);
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
