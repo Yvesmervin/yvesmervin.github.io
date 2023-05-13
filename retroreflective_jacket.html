@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+
+<link rel="stylesheet" href="styles.css">
+
+<meta name="description" content="Yves-Valentin Design">
+<meta name="keywords" content="fashion, fashion design, couture, portfolio">
+<meta name="author" content="Yves Mervin-Leroy">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+</head>
+
+<body>
+
+<embed type="text/html" src="header.html" id="header-embed">
+<div class="header-spacer"></div>
+
+<div class="block-align-center">
+       <a class="page-title">Retro-Reflective Jacket</a>
+</div>
+
+<div class="gallery-block">
+   <div class="gallery-twothirds-block">
+        <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895615403_28af5c15f0_o.jpg" alt="Retroreflective glass on silk chiffon jacket modeled by Sofe Cote">
+   </div>
+   <div class="gallery-twothirds-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895615173_be2c62ab18_o.jpg" alt="Retroreflective glass on silk chiffon jacket modeled by Sofe Cote">
+   </div>
+   <div class="gallery-third-block" style="margin-top:100px;">
+    <div class="gallery-item-text" style="margin-top:30%">
+      <a class="body-title">Retro-Reflective Glass<br><br></a>
+      <a class="secondary-text">Tiny glass beads stenciled on to fine silk chiffon refract light in a unique way in this lightweight bomber</a>
+    </div>
+   </div>
+   <div class="gallery-third-block" style="margin-top:200px;">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895552485_04a443563a_o.jpg" alt="Retroreflective glass on silk chiffon jacket modeled by Sofe Cote">
+   </div>
+   <div class="gallery-twothirds-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895209066_77ff7d9092_o.jpg" alt="Retroreflective glass on silk chiffon jacket modeled by Sofe Cote">
+   </div>
+   <div class="gallery-twothirds-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895160541_f81c5fd4f5_o.jpg" alt="Retroreflective glass on silk chiffon jacket modeled by Sofe Cote">
+   </div>
+   <div class="gallery-credits">
+    <a class="">Photo:  <a class="gallery-credit-links" style="margin-right: 50px;" href="https://www.amymilstein.com" target="_blank" rel="noopener noreferrer">Amy Milstein</a> Model:  <a class="gallery-credit-links" href="https://www.instagram.com/fannypackforseeds/" target="_blank" rel="noopener noreferrer">Sofe Cote</a></a>
+   </div>
+</div>
+
+<!-- MODAL -->
+<div id="my-modal" class="modal">
+    <span class="close" onclick="modal.style.display = 'none'">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+<script>
+  var modal = document.getElementById('my-modal');
+  var modalImg = document.getElementById("modal-image");
+
+  function modalfunction(el) {
+    var ImgSrc = el.src;
+    var altText = el.alt;
+    modal.style.display = "block";
+    modalImg.src = ImgSrc;
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+</script>
+
+<div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
+<embed type="text/html" src="footer.html" id="footer">
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+
+<link rel="stylesheet" href="styles.css">
+
+<meta name="description" content="Yves-Valentin Design">
+<meta name="keywords" content="fashion, fashion design, couture, portfolio">
+<meta name="author" content="Yves Mervin-Leroy">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+</head>
+
+<body>
+
+<embed type="text/html" src="header.html" id="header-embed">
+<div class="header-spacer"></div>
+
+<div class="block-align-center">
+       <a class="page-title">Liquid Metal Fabrics</a>
+</div>
+
+<div class="gallery-block">
+   <div class="gallery-half-block">
+        <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895267396_034837023f_o.jpg" alt="Liquid metal pants modeled by Sofe Cote">
+   </div>
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52894698782_ba442d8c82_o.jpg" alt="Liquid metal dress modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-third-block" style="margin-top:100px;">
+    <div class="gallery-item-text" style="margin-top:30%">
+      <a class="body-title">High Gloss Fabrics<br><br></a>
+      <a class="secondary-text">Silk-lurex velvet cascades over the body in this gunmetal chain-backed dress <br>
+      High gloss satin reflects ambient light in these leightweight structured pants with gunmetal hardware</a>
+    </div>
+   </div>
+   <div class="gallery-twothirds-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52894698942_264e2c72e9_o.jpg" alt="Liquid metal dress and pants modeled by sofe cote and lauren corcoran">
+   </div>
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895659410_4a9d6277a7_o.jpg" alt="Liquid metal dress modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895720628_a8b87028f4_o.jpg" alt="Liquid metal pants modeled by Sofe Cote">
+   </div>
+   <div class="gallery-third-block" style="margin-top: 100px;">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895668015_9759ba03c8_o.jpg" alt="Liquid metal pants modeled by Sofe Cote">
+   </div>
+   <div class="gallery-twothirds-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895720693_436a94d853_o.jpg" alt="Liquid metal pants modeled by Sofe Cote">
+   </div>
+   <div class="gallery-twothirds-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895659075_763f909872_o.jpg" alt="Liquid metal dress and pants modeled by sofe cote and lauren corcoran">
+   </div>
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52894699082_f47a44ea7e_o.jpg" alt="Liquid metal dress modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52895720588_34abfb3bb5_o.jpg" alt="Liquid metal dress modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-credits">
+    <a class="">Photo:  <a class="gallery-credit-links" style="margin-right: 50px;" href="https://www.amymilstein.com" target="_blank" rel="noopener noreferrer">Amy Milstein</a> Models:  <a class="gallery-credit-links" href="https://www.instagram.com/fannypackforseeds/" target="_blank" rel="noopener noreferrer">Sofe Cote,      </a><a class="gallery-credit-links" href="https://www.instagram.com/laur.ren.ren/" target="_blank" rel="noopener noreferrer">Lauren Corcoran</a></a>
+   </div>
+</div>
+
+<!-- MODAL -->
+<div id="my-modal" class="modal">
+    <span class="close" onclick="modal.style.display = 'none'">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+<script>
+  var modal = document.getElementById('my-modal');
+  var modalImg = document.getElementById("modal-image");
+
+  function modalfunction(el) {
+    var ImgSrc = el.src;
+    var altText = el.alt;
+    modal.style.display = "block";
+    modalImg.src = ImgSrc;
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+</script>
+
+<div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
+<embed type="text/html" src="footer.html" id="footer">
+
+</body>
+
+</html>
