@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+
+<link rel="stylesheet" href="styles.css">
+
+<meta name="description" content="Yves-Valentin Design">
+<meta name="keywords" content="fashion, fashion design, couture, portfolio">
+<meta name="author" content="Yves Mervin-Leroy">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+</head>
+
+<body>
+
+<embed type="text/html" src="header.html" id="header-embed">
+<div class="header-spacer"></div>
+
+<div class="block-align-center">
+       <a class="page-title">Paneled Leather Jacket</a>
+</div>
+
+<div class="gallery-block">
+   <div class="gallery-twothirds-block">
+        <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52894706909_62632ddcb8_o.jpg" alt="Leather and mesh jacket modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-third-block">
+    <!--<div class="gallery-item-text" style="margin-top:30%">
+      <a class="body-title">Paneled Jacket<br></a>
+      <a class="secondary-text">Inset panels of mesh layered over top grain leather</a>
+    </div>-->
+   </div>
+   <div class="gallery-half-block" style="margin-top:100px;">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52893972437_f7f3cd68f9_o.jpg" alt="Leather and mesh jacket modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52894706794_c9df35a994_o.jpg" alt="Leather and mesh jacket modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-third-block">
+   </div>
+   <div class="gallery-twothirds-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52894931765_e5ec7475a5_o.jpg" alt="Leather and mesh jacket modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-full-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" style="margin-right:20%;" src="https://live.staticflickr.com/65535/52894931815_b03c0780b8_o.jpg" alt="Leather and mesh jacket modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52894995828_2b473323cf_o.jpg" alt="Leather and mesh jacket modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-half-block" style="margin-top:100px;">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/52894539791_34b8727407_o.jpg" alt="Leather and mesh jacket modeled by Lauren Corcoran">
+   </div>
+   <div class="gallery-credits">
+    <a class="">Photo:  <a class="gallery-credit-links" style="margin-right: 50px;" href="https://www.amymilstein.com" target="_blank" rel="noopener noreferrer">Amy Milstein</a> Model:  <a class="gallery-credit-links" href="https://www.instagram.com/laur.ren.ren/" target="_blank" rel="noopener noreferrer">Lauren Corcoran</a></a>
+   </div>
+</div>
+
+<!-- MODAL -->
+<div id="my-modal" class="modal">
+    <span class="close" onclick="modal.style.display = 'none'">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+<script>
+  var modal = document.getElementById('my-modal');
+  var modalImg = document.getElementById("modal-image");
+
+  function modalfunction(el) {
+    var ImgSrc = el.src;
+    var altText = el.alt;
+    modal.style.display = "block";
+    modalImg.src = ImgSrc;
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+</script>
+
+<div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
+<embed type="text/html" src="footer.html" id="footer">
+
+</body>
+
+</html>
