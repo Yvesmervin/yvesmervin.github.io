@@ -30,7 +30,7 @@ body {margin:0; background-color:var(--background-color);}
   --invisible: rgba(255, 255, 255, 0);
 
 /**FONT**/
-  --font: darker grotesque, jura, arial,sans-serif;
+  --font: jura, darker grotesque, arial,sans-serif;
   --font-color: black;
   --font-color-secondary: rgb(100, 100, 100);
   --font-color-link: rgb(51, 51, 51);

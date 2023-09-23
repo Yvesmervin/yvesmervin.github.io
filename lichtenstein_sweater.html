@@ -5,6 +5,9 @@
 <head>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Jura&display=swap" rel="stylesheet">
 
 <meta name="description" content="Yves-Valentin Design">
 <meta name="keywords" content="fashion, fashion design, couture, portfolio">
@@ -23,7 +26,7 @@
 </div>
 
 <div class="gallery-block">
-   <div class="gallery-half-block"> 
+   <div class="gallery-half-block">
       <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51251205377_b910ed3105_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
    </div>
    <div class="gallery-half-block">
@@ -32,13 +35,13 @@
         <a class="secondary-text">Pop artist Roy Lichtenstein inspires the embroidered and beaded motif of a crying figure with a hand chain-stitch silhouette.</a>
       </div>
    </div>
-   <div class="gallery-full-block"> 
+   <div class="gallery-full-block">
       <img class="gallery-item-image" onclick="modalfunction(this)" style="margin-left:15%;" src="https://live.staticflickr.com/65535/51251935131_f9baf211f3_o.jpg">
    </div>
-   <div class="gallery-half-block"> 
+   <div class="gallery-half-block">
       <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51252684399_9c4a5ff4b6_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
    </div>
-   <div class="gallery-half-block" style="margin-top:10%;"> 
+   <div class="gallery-half-block" style="margin-top:10%;">
       <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51251935231_48a79cb4ac_o.jpg" alt="Detail of tear with glass beads">
    </div>
 </div>
@@ -51,7 +54,7 @@
 <script>
   var modal = document.getElementById('my-modal');
   var modalImg = document.getElementById("modal-image");
-  
+
   function modalfunction(el) {
     var ImgSrc = el.src;
     var altText = el.alt;
