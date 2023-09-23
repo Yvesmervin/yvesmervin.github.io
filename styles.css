@@ -30,7 +30,7 @@ body {margin:0; background-color:var(--background-color);}
   --invisible: rgba(255, 255, 255, 0);
 
 /**FONT**/
-  --font: didot, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  --font: darker grotesque, jura, arial,sans-serif;
   --font-color: black;
   --font-color-secondary: rgb(100, 100, 100);
   --font-color-link: rgb(51, 51, 51);
@@ -88,6 +88,8 @@ body {margin:0; background-color:var(--background-color);}
 
   }
 
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+
   @media (pointer:fine) { /* For desktop: */
     #header{width:100%; position:fixed; height:var(--header-height); background-color:var(--secondary-color); -webkit-transition:1s; /**text-align:bottom;**/ border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); z-index:10;}
     #header:hover, #header:active{box-shadow: 0px -10px 0px var(--background-color); height:var(--header-hover-height); -webkit-transition:1s; overflow:hidden; background-color:var(--secondary-color);}
@@ -120,6 +122,7 @@ body {margin:0; background-color:var(--background-color);}
 
     .title{color:var(--font-color-secondary); font-family: var(--font); font-size:var(--header-font-size); text-align:center; line-height:var(--header-height); text-decoration:none;}
     .secondary-text{line-height: 2; font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color-secondary);}
+    .description-text{font-weight: 400; line-height: 1.5; font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color-secondary);}
     .text-link{font-size:var(--font-size); font-family: var(--font); text-decoration:none; color:var(--font-color-link); font-weight: bold; -webkit-transition:0.7s;}
     .text-link:hover, .text-link:active {color:var(--link-color-hover); -webkit-transition:0.7s;}
     .vertical-align-text{position:relative; top:50%; transform:translateY(-50%); align:center;}
@@ -199,11 +202,11 @@ body {margin:0; background-color:var(--background-color);}
     .gallery-credits{display:table; justify-content:center; margin: 0; margin-top:25px; margin-bottom:25px; color:var(--footer-font-color); font-size:var(--footer-font-size); font-family: var(--font); text-decoration:none; background-color:var(--background-color); width:var(--gallery-block-width); text-align:center; vertical-align:middle; position:relative; z-index:5}
     .gallery-credit-links{color:var(--footer-font-color); font-size:var(--footer-font-size); font-family: var(--font); text-decoration:none; text-align:center; -webkit-transition:1s;}
     .gallery-credit-links:hover, .footer-links:active{color:var(--link-color-hover); -webkit-transition:1s;}
-    
+
     .gallery-unit{width:80%; display:table-row; top:0;}
     .gallery-unit-image{opacity:1; width:80%; height:auto; margin:10%; box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
     .gallery-link{height:0px; width:0px;}
-    
+
     @media (pointer:fine) { /* For desktop: */
       .gallery-unit-title{opacity:0; text-shadow: 0px 0px 4px var(--background-hover-color), 0px 0px 10px var(--background-hover-color), 0px 0px 10px var(--background-hover-color), 0px 0px 20px var(--background-hover-color); position:absolute; top:50%; transform:translateY(-50%); pointer-events:none; width:100%; -webkit-transition:0.5s;}
       .gallery-unit:hover > .gallery-unit-title{opacity:1; -webkit-transition:1s;}
@@ -213,10 +216,10 @@ body {margin:0; background-color:var(--background-color);}
       .gallery-unit-title{position:absolute; bottom:0; width:80%; margin:10%; background-color:var(--text-box-color); padding-top:3%; padding-bottom:3%; pointer-events:none;}
     }
 /*GALLERY INDIVIDUAL PAGES*/
-    
+
     .gallery-item-image{display:table-row; margin-top:5%; margin-left:10%; margin-right:10%; margin-bottom:5%; height:auto; width:80%; box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:1s;}
     .gallery-item-image:hover{transform: scale(1.05); -webkit-transition:1s;}
-    
+
 /* MODAL */
 .modal {
   display: none; /* Hidden by default */
@@ -250,8 +253,8 @@ body {margin:0; background-color:var(--background-color);}
   transition: 0.3s;
   cursor: pointer;
 }
-    $("#bar").find('div.section:empty').hide(); 
-    
+    $("#bar").find('div.section:empty').hide();
+
     .collection-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:calc(var(--block-width)-4px); max-width:var(--block-max-width); padding-bottom:var(--portfolio-block-padding); padding-top:var(--portfolio-block-padding); margin-left: 2px; margin-right: 2px; text-align:center; vertical-align:middle; overflow:hidden; position:relative; z-index:5;
     border-bottom-style:solid; border-color:var(--accent-color); border-width:var(--border-width);}
 

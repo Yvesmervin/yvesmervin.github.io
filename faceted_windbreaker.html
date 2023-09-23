@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+
+<link rel="stylesheet" href="styles.css">
+
+<meta name="description" content="Yves-Valentin Design">
+<meta name="keywords" content="fashion, fashion design, couture, portfolio">
+<meta name="author" content="Yves Mervin-Leroy">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+</head>
+
+<body>
+
+<embed type="text/html" src="header.html" id="header-embed">
+<div class="header-spacer"></div>
+
+<!--<div class="block-align-center">
+       <a class="page-title">Cropped Windbreaker</a>
+</div>-->
+
+<div class="gallery-block">
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51251205377_b910ed3105_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+   </div>
+   <div class="gallery-half-block">
+      <div class="gallery-item-text" style="margin-top:20%;">
+        <a class="body-title">FACETED WINDBREAKER<br></a>
+        <a class="secondary-text">Heavy silk charmeuse color blocking<br></a>
+        <a class="secondary-text">Style number: #19214<br></a>
+        <!-- size option
+        size chart
+        buy button
+        Add to cart button-->
+      </div>
+      <div class="gallery-item-text" style="margin-top:20%;">
+        <a class="description-text">The Faceted Windbreaker pays homage to the iconic jackets of the 80s with their bold and angular designs.
+          Crafted in pure heavy weight silk charmeuse, the cropped silhouette drapes softly over the body.
+          The jacket features a zip front with an elastic hem and cuffs.</a>
+      </div>
+   </div>
+   <div class="gallery-full-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" style="margin-left:15%;" src="https://live.staticflickr.com/65535/51251935131_f9baf211f3_o.jpg">
+   </div>
+   <div class="gallery-half-block">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51252684399_9c4a5ff4b6_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+   </div>
+   <div class="gallery-half-block" style="margin-top:10%;">
+      <img class="gallery-item-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/51251935231_48a79cb4ac_o.jpg" alt="Detail of tear with glass beads">
+   </div>
+</div>
+
+<!-- MODAL -->
+<div id="my-modal" class="modal">
+    <span class="close" onclick="modal.style.display = 'none'">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+<script>
+  var modal = document.getElementById('my-modal');
+  var modalImg = document.getElementById("modal-image");
+
+  function modalfunction(el) {
+    var ImgSrc = el.src;
+    var altText = el.alt;
+    modal.style.display = "block";
+    modalImg.src = ImgSrc;
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+</script>
+
+<div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
+<embed type="text/html" src="footer.html" id="footer">
+
+</body>
+
+</html>
