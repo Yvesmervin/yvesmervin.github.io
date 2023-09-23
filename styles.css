@@ -88,8 +88,6 @@ body {margin:0; background-color:var(--background-color);}
 
   }
 
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
-
   @media (pointer:fine) { /* For desktop: */
     #header{width:100%; position:fixed; height:var(--header-height); background-color:var(--secondary-color); -webkit-transition:1s; /**text-align:bottom;**/ border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width); z-index:10;}
     #header:hover, #header:active{box-shadow: 0px -10px 0px var(--background-color); height:var(--header-hover-height); -webkit-transition:1s; overflow:hidden; background-color:var(--secondary-color);}
