@@ -27,21 +27,29 @@
 
 <div class="gallery-block">
    <div class="product-image-block">
+     <a class="product-carousel-forward" onclick="plusSlides(1)">&#10095;</a>
+     <a class="product-carousel-back" onclick="plusSlides(-1)">&#10094;</a>
       <img class="product-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492711_dac3840fd9_o.png" alt="Front view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
       <img class="product-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492421_a9746cf717_o.png" alt="Back view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
       <img class="product-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492411_84456b5c9b_o.png" alt="Closed front view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
+      <!-- The circles/dots -->
+      <div style="text-align:center">
+        <span class="product-carousel-dots" onclick="currentSlide(1)"></span>
+        <span class="product-carousel-dots" onclick="currentSlide(2)"></span>
+        <span class="product-carousel-dots" onclick="currentSlide(3)"></span>
+      </div>
    </div>
    <div class="product-text-block">
       <div class="product-text">
         <a class="body-title">FACETED WINDBREAKER<br></a>
         <a class="secondary-text">Heavy silk charmeuse color blocking<br></a>
         <a class="secondary-text">Style number: #19214<br></a>
-      <div class="product-purchase">
-      <a class="secondary-title-text">chose size<br></a>
-      <a class="secondary-text">size chart<br></a>
-        <a class="secondary-title-text">$550<br></a>
-        <a class="secondary-title-text">BUY NOW<br></a>
-      </div>
+        <div class="product-purchase">
+          <a class="secondary-title-text">chose size<br></a>
+          <a class="secondary-text">size chart<br></a>
+          <a class="secondary-title-text">$550<br></a>
+          <a class="secondary-title-text">BUY NOW<br></a>
+        </div>
         <a class="secondary-title-text" >DESCRIPTION<br></a>
         <a class="description-text">The Faceted Windbreaker pays homage to the iconic jackets of the 80s with their bold and angular designs.
           Crafted in pure heavy weight silk charmeuse, the cropped silhouette drapes softly over the body.
@@ -80,6 +88,76 @@
         modal.style.display = "none";
     }
   }
+</script>
+
+<script>
+let scriptElement; // Variable to hold the script element
+
+function importScript(url) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = url;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+    scriptElement = script; // Store the script element
+  });
+}
+
+function loadScript() {
+  if (window.innerWidth < 1000) {
+    // Screen width is less than 1000px, so import the script if not already loaded
+    if (!scriptElement) {
+      importScript('carousel.js')
+        .then(() => {
+          // Script has been successfully imported
+          // You can now use functions or variables from the imported script
+          // For example:
+          // someFunctionFromImportedScript();
+        })
+        .catch((error) => {
+          console.error('Error importing the script:', error);
+        });
+    }
+  } else {
+    function updateClassBasedOnScreenWidth() {
+  const productImage = document.querySelector('.product-image');
+
+  if (window.innerWidth > 999) {
+    productImage.classList.add('display:table-row;');
+  }
+}
+    // Screen width is greater than or equal to 1000px, remove the script if it exists
+    if (scriptElement) {
+      document.head.removeChild(scriptElement);
+      scriptElement = null; // Reset the script element variable
+    }
+  }
+}
+
+// Load the script initially
+loadScript();
+
+// Reload the script whenever the window is resized
+window.addEventListener('resize', () => {
+  loadScript();
+});
+</script>
+
+<script>
+function updateImageDisplay() {
+  const image = document.getElementById('product-image');
+
+  if (window.innerWidth > 999) {
+    image.classList.add('display: table-row;');
+  } else {
+
+  }
+}
+
+// Call the function on page load and whenever the window is resized
+window.addEventListener('load', updateImageDisplay);
+window.addEventListener('resize', updateImageDisplay);
 </script>
 
 <div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
