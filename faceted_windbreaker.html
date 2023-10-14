@@ -63,7 +63,19 @@
           <li>Full zip</li>
         </ul>
         </a>
-        <a class="secondary-title-text" >SIZE AND FIT<br></a>
+        <button class="collapsible" onclick="toggleCollapse(this)"><a class="secondary-title-text" >SIZE AND FIT <span class="arrow-down"></span></a></button>
+        <div class="collapsed"><a class="description-text">Oversized fit<br><br>
+        Size S-M<br>
+        Length - 24" / CM<br>
+        Chest - 42" / CM<br>
+        Sleeve (from neck) - 32" / CM<br>
+        Waist - 31-42" / CM<br><br>
+        Size L-XL<br>
+        Length - 25" / CM<br>
+        Chest - 53" / CM<br>
+        Sleeve (from neck) - 34" / CM<br>
+        Waist - 34-53" / CM<br>
+      </a></div>
       </div>
    </div>
 </div>
@@ -90,6 +102,24 @@
   }
 </script>
 
+<!--collapsible menu-->
+<script>
+  function toggleCollapse(button) {
+    button.classList.toggle("active");
+    var content = button.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+      button.querySelector('.arrow-up').classList.remove('arrow-up');
+      button.querySelector('span').classList.add('arrow-down');
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.querySelector('.arrow-down').classList.remove('arrow-down');
+      button.querySelector('span').classList.add('arrow-up');
+    }
+  }
+</script>
+
+<!--carousel fetching and enabling-->
 <script>
 let scriptElement; // Variable to hold the script element
 
