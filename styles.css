@@ -235,7 +235,8 @@ body {margin:0; background-color:var(--background-color);}
       .product-text-block{position:relative; width:90%; padding-bottom:5%; background-color:var(--background-color); text-align:left;}
       .product-text{position:relative; width:auto; background-color:var(--secondary-color); padding:5%; margin-top:5%; text-align:left; box-shadow: 2px 2px 4px var(--background-hover-color);}
       .product-purchase{position:relative; width:100%; margin-top:10%; margin-bottom:10%; text-align:center;}
-      .product-image{display:none; background-color:var(--secondary-color); height:auto; width:100%;}
+      .product-image{display:none; background-color:var(--secondary-color); height:auto; width:100%; transition: opacity 0.5s, transform 0.5s;}
+      .product-image.active{display:block; opacity:1; transform: translateX(0);}
       .product-carousel-back, .product-carousel-forward{position:absolute; cursor:pointer; top:48%; padding:1%; color:var(--background-hover-color); font-size:var(--title-font-size); transition: 0.5s ease;}
       .product-carousel-back:hover, .product-carousel-forward:hover{color:var(--font-color-secondary); transition: 0.5s ease;}
       .product-carousel-forward{right:0;}
