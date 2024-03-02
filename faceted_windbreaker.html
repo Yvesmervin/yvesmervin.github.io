@@ -46,8 +46,8 @@
         <a class="secondary-text">Style number: #19214<br></a>
         <div class="product-purchase">
           <a class="secondary-title-text">chose size<br></a>
-          <a class="secondary-text">size chart<br></a>
-          <a class="secondary-title-text">$550<br></a>
+          <a class="secondary-text" onclick="modal2function(this)">size chart<br></a>
+          <a class="secondary-title-text">$500<br></a>
           <a class="secondary-title-text">BUY NOW<br></a>
         </div>
         <a class="secondary-title-text" >DESCRIPTION<br></a>
@@ -66,15 +66,15 @@
         <button class="collapsible" onclick="toggleCollapse(this)"><a class="secondary-title-text" >SIZE AND FIT <span class="arrow-down"></span></a></button>
         <div class="collapsed"><a class="description-text">Oversized fit<br><br>
         Size S-M<br>
-        Length - 24" / CM<br>
-        Chest - 42" / CM<br>
-        Sleeve (from neck) - 32" / CM<br>
-        Waist - 31-42" / CM<br><br>
+        Length - 24" / 61 CM<br>
+        Chest - 42" / 106.5 CM<br>
+        Sleeve (from neck) - 32" / 81CM<br>
+        Waist - 31-42" / 79-106 CM<br><br>
         Size L-XL<br>
-        Length - 25" / CM<br>
-        Chest - 53" / CM<br>
-        Sleeve (from neck) - 34" / CM<br>
-        Waist - 34-53" / CM<br>
+        Length - 25" / 63.5 CM<br>
+        Chest - 53" / 135 CM<br>
+        Sleeve (from neck) - 34" / 86 CM<br>
+        Waist - 34-53" / 86-135 CM<br>
       </a></div>
       </div>
    </div>
@@ -86,20 +86,48 @@
     <img class="modal-content" id="modal-image">
 </div>
 <script>
-  var modal = document.getElementById('my-modal');
-  var modalImg = document.getElementById("modal-image");
+var modal = document.getElementById('my-modal');
+var modalImg = document.getElementById("modal-image");
 
-  function modalfunction(el) {
-    var ImgSrc = el.src;
-    var altText = el.alt;
-    modal.style.display = "block";
-    modalImg.src = ImgSrc;
+function modalfunction(el) {
+  var ImgSrc = el.src;
+  var altText = el.alt;
+  modal.style.display = "block";
+  modalImg.src = ImgSrc;
+  document.body.classList.add('modal-open');
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+      document.body.classList.remove('modal-open');
   }
-  window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+}
+</script>
+
+<!-- MODAL for size chart -->
+<div id="my-modal" class="modal">
+    <span class="close" onclick="modal.style.display = 'none'">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+<script>
+var modal = document.getElementById('my-modal');
+var modalImg = document.getElementById("modal-image");
+
+function modal2function(el) {
+  var ImgSrc = el.src;
+  var altText = el.alt;
+  modal.style.display = "block";
+  modalImg.src = src="https://live.staticflickr.com/65535/53227492411_84456b5c9b_o.png";
+  document.body.classList.add('modal-open');
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+      document.body.classList.remove('modal-open');
   }
+}
 </script>
 
 <!--collapsible menu-->
