@@ -193,7 +193,7 @@ body.modal-open {margin:0; background-color:var(--background-color); overflow:hi
 @media only screen and (max-width: 768px) { /* For portrait mobile phones: */
     .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:100%; text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
     .gallery-twothirds-block{display:table; justify-content:center; margin: 0; width:var(--gallery-block-width); text-align:center; vertical-align:middle; position:relative; z-index:5}
-    .gallery-third-block{display:table; justify-content:center; margin: 0; width:var(--gallery-block-width); text-align:center; vertical-align:middle; position:relative; z-index:5}
+    .gallery-third-block{display:table; justify-content:center; margin: 0; width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; position:relative; z-index:5}
     .gallery-quarter-block{display:table; justify-content:center; margin: 0; width:calc(var(--gallery-block-width) / 2); text-align:center; vertical-align:middle; position:relative; z-index:5}
 	.gallery-item-text{display:table; width:80%; background-color:var(--secondary-color); padding:5%; margin:5%; text-align:center; height:auto; box-shadow: 2px 2px 4px var(--background-hover-color);}
 }
@@ -211,7 +211,7 @@ body.modal-open {margin:0; background-color:var(--background-color); overflow:hi
     @media (pointer:fine) { /* For desktop: */
       .gallery-unit-title{opacity:0; text-shadow: 0px 0px 4px var(--background-hover-color), 0px 0px 10px var(--background-hover-color), 0px 0px 10px var(--background-hover-color), 0px 0px 20px var(--background-hover-color); position:absolute; top:50%; transform:translateY(-50%); pointer-events:none; width:100%; -webkit-transition:0.5s;}
       .gallery-unit:hover > .gallery-unit-title{opacity:1; -webkit-transition:1s;}
-      .gallery-unit-image:hover{opacity:0.7; transform: scale(1.05); -webkit-transition:1s;}
+      .gallery-unit-image:hover{transform: scale(1.05); -webkit-transition:1s;}
     }
     @media (pointer:coarse) { /* For mobile phones: */
       .gallery-unit-title{position:absolute; bottom:0; width:80%; margin:10%; background-color:var(--text-box-color); padding-top:3%; padding-bottom:3%; pointer-events:none;}
