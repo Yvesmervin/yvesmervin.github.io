@@ -15,6 +15,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>EMBOSSED SLIP DRESS</title>
 
+<script src="gallery_grid.js" defer></script>
+
 </head>
 
 <body>
@@ -84,45 +86,6 @@
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modal-image">
 </div>
-
-<script>
-var modal = document.getElementById('my-modal');
-var modalImg = document.getElementById("modal-image");
-
-function modalfunction(el) {
-  var ImgSrc = el.src;
-  var altText = el.alt;
-  modal.style.display = "block";
-  modalImg.src = ImgSrc;
-  document.body.classList.add('modal-open');
-  document.body.style.overflow = "hidden"; // Disable scrolling when modal is open
-}
-
-function closeModal() {
-  modal.style.display = "none";
-  document.body.classList.remove('modal-open');
-  document.body.style.overflow = ""; // Re-enable scrolling
-
-  // Force browser to apply overflow change
-  setTimeout(() => {
-    document.body.style.overflow = "auto";
-  }, 10);
-}
-
-// Close modal when clicking outside of the image
-window.onclick = function(event) {
-  if (event.target === modal) {
-      closeModal();
-  }
-};
-
-// Close modal when pressing "Escape"
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") {
-      closeModal();
-  }
-});
-</script>
 
 <!-- MODAL for size chart -->
 <div id="my-modal" class="modal">

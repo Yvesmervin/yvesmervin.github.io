@@ -15,6 +15,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BOOM SWEATER</title>
 
+<script src="gallery_grid.js" defer></script>
+
 </head>
 
 <body>
@@ -76,32 +78,6 @@
     </div>
   </div>
 </div>
-
-<!--GRID COLLUMN SCRIPT-->
-  <script>
-    function updateGalleryGridColumns() {
-      const grid = document.querySelector('.gallery-grid');
-      if (!grid) return; // Exit if the element is not found
-
-      const containerWidth = grid.clientWidth;
-      const columnMinWidth = 250;
-      const maxColumns = 4;
-
-      const calculatedColumns = Math.floor(containerWidth / columnMinWidth);
-      const finalColumnCount = Math.max(1, Math.min(calculatedColumns, maxColumns));
-
-      grid.style.gridTemplateColumns = `repeat(${finalColumnCount}, 1fr)`;
-    }
-
-    // Debounce to avoid rapid firing on resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(updateGalleryGridColumns, 100);
-    });
-
-    window.addEventListener('DOMContentLoaded', updateGalleryGridColumns);
-  </script>
 
 <!-- MODAL -->
 <div id="my-modal" class="modal">
