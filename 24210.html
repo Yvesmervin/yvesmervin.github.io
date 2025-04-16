@@ -54,25 +54,37 @@
         </ul>
       </a></div>
     </div>
+</div>
+<div class="gallery-grid">
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <img class="gallery-unit-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409606539_6a58e94666_o.png">
+    </div>
   </div>
-<div class="product-extra-image-block">
-  <div class="product-extra-image-half-div">
-    <img class="product-extra-image-half" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409606539_6a58e94666_o.png">
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <img class="gallery-unit-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409606364_bea750ca6d_o.png">
+    </div>
   </div>
-  <div class="product-extra-image-half-div">
-    <img class="product-extra-image-half" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409606364_bea750ca6d_o.png">
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <img class="gallery-unit-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409669448_416f6f1a7b_o.png">
+    </div>
   </div>
-  <div class="product-extra-image-quarter-div">
-    <img class="product-extra-image-quarter" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409669448_416f6f1a7b_o.png">
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <img class="gallery-unit-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54408557092_4b86c667d1_o.png">
+    </div>
   </div>
-  <div class="product-extra-image-quarter-div">
-    <img class="product-extra-image-quarter" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54408557092_4b86c667d1_o.png">
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <img class="gallery-unit-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409423906_4bf35e73eb_o.png">
+    </div>
   </div>
-  <div class="product-extra-image-quarter-div">
-    <img class="product-extra-image-quarter" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409423906_4bf35e73eb_o.png">
-  </div>
-  <div class="product-extra-image-quarter-div">
-    <img class="product-extra-image-quarter" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409803490_9905a36c10_o.png">
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <img class="gallery-unit-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/54409803490_9905a36c10_o.png">
+    </div>
   </div>
 </div>
 
@@ -82,6 +94,32 @@
     <img class="modal-content" id="modal-image">
 </div>
 
+<!--GRID COLLUMN SCRIPT-->
+  <script>
+    function updateGalleryGridColumns() {
+      const grid = document.querySelector('.gallery-grid');
+      if (!grid) return; // Exit if the element is not found
+
+      const containerWidth = grid.clientWidth;
+      const columnMinWidth = 250;
+      const maxColumns = 4;
+
+      const calculatedColumns = Math.floor(containerWidth / columnMinWidth);
+      const finalColumnCount = Math.max(1, Math.min(calculatedColumns, maxColumns));
+
+      grid.style.gridTemplateColumns = `repeat(${finalColumnCount}, 1fr)`;
+    }
+
+    // Debounce to avoid rapid firing on resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(updateGalleryGridColumns, 100);
+    });
+
+    window.addEventListener('DOMContentLoaded', updateGalleryGridColumns);
+  </script>
+  
 <script>
 var modal = document.getElementById('my-modal');
 var modalImg = document.getElementById("modal-image");
