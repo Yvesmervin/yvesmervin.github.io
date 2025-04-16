@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Jura&display=swap" rel="stylesheet">
+
+<meta name="description" content="Yves-Valentin Design">
+<meta name="keywords" content="fashion, fashion design, couture, portfolio">
+<meta name="author" content="Yves Mervin-Leroy">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+</head>
+
+
+<body>
+
+
+<embed type="text/html" src="header.html" id="header-embed">
+<div class="header-spacer"></div>
+
+<div class="block-align-center">
+       <a class="page-title">Gallery</a>
+</div>
+
+<!--GRID UNITS
+
+STANDARD IMAGE LINK
+<div class="gallery-unit">
+  <div class="gallery-unit-image-container">
+  <a class="gallery-link" href="LINK">
+  <img class="gallery-unit-image" src="URL">
+  <div class="gallery-unit-title">
+    <a class="body-title">TITLE</a>
+  </div>
+  </div>
+</div>
+
+2x2 IMAGE LINK
+<div class="gallery-unit-2x2">
+  <div class="gallery-unit-image-container-2x2">
+  <a class="gallery-link" href="LINK">
+  <img class="gallery-unit-image-2x2" src="LINK">
+  <div class="gallery-unit-title-2x2">
+    <a class="body-title">TITLE</a>
+  </div>
+  </div>
+</div>
+
+2x1 IMAGE LINK (WIDE)
+<div class="gallery-unit-2x1">
+  <div class="gallery-unit-image-container-2x1">
+  <a class="gallery-link" href="LINK">
+  <img class="gallery-unit-image-2x1" src="LINK">
+  <div class="gallery-unit-title">
+    <a class="body-title">TITLE</a>
+  </div>
+  </div>
+</div>
+
+1x2 IMAGE LINK (TALL)
+<div class="gallery-unit-1x2">
+  <div class="gallery-unit-image-container-1x2">
+  <a class="gallery-link" href="LINK">
+  <img class="gallery-unit-image-1x2" src="LINK">
+  <div class="gallery-unit-title">
+    <a class="body-title">TITLE</a>
+  </div>
+  </div>
+</div>
+
+TEXT BOX
+<div class="gallery-unit">
+  <div class="gallery-unit-text-box">
+    <div class="gallery-unit-text-container">
+      <div class="gallery-unit-text">
+        <a class="body-title">TITLE</a><br><br>
+        <a class="body-text">BODY TEXT</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+2x1 TEXT BOX (WIDE)
+<div class="gallery-unit-2x1">
+  <div class="gallery-unit-text-box-2x1">
+    <div class="gallery-unit-text-container">
+      <div class="gallery-unit-text">
+        <a class="body-title">TITLE</a><br><br>
+        <a class="body-text">BODY TEXT</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+1x2 TEXT BOX (TALL)
+<div class="gallery-unit-1x2">
+  <div class="gallery-unit-text-box-1x2">
+    <div class="gallery-unit-text-container">
+      <div class="gallery-unit-text">
+        <a class="body-title">TITLE</a><br><br>
+        <a class="body-text">BODY TEXT</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+2x1 MINI PRODUCT PAGE (WIDE)
+<div class="gallery-unit-2x1">
+  <div class="gallery-unit-mini-product-page-2x1">
+    <div class="carousel-container-2x1">
+      <div class="mini-product-carousel-block">
+      <a class="mini-product-carousel-forward" onclick="plusSlides(1, this)">&#10095;</a>
+      <a class="mini-product-carousel-back" onclick="plusSlides(-1, this)">&#10094;</a>
+      <img class="mini-product-image active" onclick="modalfunction(this)" src="LINK">
+      <img class="mini-product-image" onclick="modalfunction(this)" src="LINK">
+      <img class="mini-product-image" onclick="modalfunction(this)" src="LINK">
+        <div style="text-align:center;">
+          <span class="mini-product-carousel-dots active" onclick="currentSlide(1, this)"></span>
+          <span class="mini-product-carousel-dots" onclick="currentSlide(2, this)"></span>
+          <span class="mini-product-carousel-dots" onclick="currentSlide(3, this)"></span>
+        </div>
+      </div>
+    </div>
+    <div class="mini-product-text-block-2x1">
+       <div class="mini-product-text-2x1">
+         <a href="/24024"><span class="mini-product-text-link"></span></a>
+         <a class="body-title">TITLE<br></a>
+         <br><a class="description-text">DESCRIPTION</a>
+         <div class="mini-inquire-button">
+           <a class="mini-inquire-button-link" href="LINK">LINK TITLE</a>
+         </div>
+         </div>
+     </div>
+  </div>
+</div>
+
+1x2 MINI PRODUCT PAGE (TALL)
+<div class="gallery-unit-1x2">
+  <div class="gallery-unit-mini-product-page-1x2">
+    <div class="carousel-container-1x2">
+      <div class="mini-product-carousel-block">
+      <a class="mini-product-carousel-forward" onclick="plusSlides(1, this)">&#10095;</a>
+      <a class="mini-product-carousel-back" onclick="plusSlides(-1, this)">&#10094;</a>
+      <img class="mini-product-image active" onclick="modalfunction(this)" src="LINK">
+      <img class="mini-product-image" onclick="modalfunction(this)" src="LINK">
+      <img class="mini-product-image" onclick="modalfunction(this)" src="LINK">
+        <div style="text-align:center;">
+          <span class="mini-product-carousel-dots active" onclick="currentSlide(1, this)"></span>
+          <span class="mini-product-carousel-dots" onclick="currentSlide(2, this)"></span>
+          <span class="mini-product-carousel-dots" onclick="currentSlide(3, this)"></span>
+        </div>
+      </div>
+    </div>
+    <div class="mini-product-text-block-1x2">
+       <div class="mini-product-text-1x2">
+         <a href="/24024"><span class="mini-product-text-link"></span></a>
+         <a class="body-title">TITLE<br></a>
+         <br><a class="description-text">DESCRIPTION</a>
+         <div class="mini-inquire-button">
+           <a class="mini-inquire-button-link" href="LINK">LINK TITLE</a>
+         </div>
+         </div>
+     </div>
+  </div>
+</div>
+-->
+<div class="gallery-grid">
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/24210">
+      <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54409668588_7da7d680a7_o.png">
+    <div class="gallery-unit-title">
+      <a class="body-title">Y-Sculpt Dress</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/24205">
+    <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54396924779_bb7c3a31d7_o.png">
+    <div class="gallery-unit-title">
+      <a class="body-title">Y-Sculpt Top</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/24207">
+    <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54413182436_8b9a1ec238_o.png">
+    <div class="gallery-unit-title">
+      <a class="body-title">Vesper Shirt</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit-2x1">
+    <div class="gallery-unit-text-box-2x1">
+      <div class="gallery-unit-text-container">
+        <div class="gallery-unit-text">
+          <a class="body-title">TITLE</a><br><br>
+          <a class="body-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/24208">
+    <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54413602265_1b07a80df3_o.png">
+    <div class="gallery-unit-title">
+      <a class="body-title">Zephyr Shirt</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/22100bl">
+    <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54409513113_04356244f4_o.png">
+    <div class="gallery-unit-title">
+      <a class="body-title">Escher Dress 2.0</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/22100pr">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54409462674_db105be6f4_o.png">
+       <div class="gallery-unit-title">
+         <a class="body-title">Escher Dress 2.0</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/21200gr">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54409443299_355f4f33b6_o.png">
+       <div class="gallery-unit-title">
+         <a class="body-title">Escher Dress</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit-1x2">
+    <div class="gallery-unit-image-container-1x2">
+    <a class="gallery-link" href="/21200gr">
+         <img class="gallery-unit-image-1x2" src="https://live.staticflickr.com/65535/51714781548_ad5f2bff91_k.jpg">
+       <div class="gallery-unit-title">
+         <a class="body-title">Escher Dress</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/21200br">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54409424694_216bf85e73_o.png">
+       <div class="gallery-unit-title">
+         <a class="body-title">Escher Dress</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/24200">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54409472799_9a798ef1e4_o.png">
+       <div class="gallery-unit-title">
+         <a class="body-title">Agartha's Coil</a>
+     </div>
+   </div>
+  </div>
+
+  <div class="gallery-unit-2x1">
+    <div class="gallery-unit-image-container-2x1">
+    <a class="gallery-link" href="/21200gr">
+         <img class="gallery-unit-image-2x1" src="https://live.staticflickr.com/65535/52895615173_be2c62ab18_o.jpg">
+       <div class="gallery-unit-title">
+         <a class="body-title">Retro-Reflective Jacket</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/24204">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54408461102_fccf8d7263_o.png">
+       <div class="gallery-unit-title">
+         <a class="body-title">Geo-Slashed Dress</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/24201">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54408444337_54fc56696e_o.png">
+       <div class="gallery-unit-title">
+         <a class="body-title">Sari Shirt</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="24206">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54409611156_9eab32b21f_o.png">
+       <div class="gallery-unit-title">
+         <a class="body-title">BOOM Sweatshirt</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit-2x1">
+    <div class="gallery-unit-mini-product-page-2x1">
+      <div class="carousel-container-2x1">
+      <div class="mini-product-carousel-block">
+        <a class="mini-product-carousel-forward" onclick="plusSlides(1, this)">&#10095;</a>
+        <a class="mini-product-carousel-back" onclick="plusSlides(-1, this)">&#10094;</a>
+         <img class="mini-product-image active" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492711_dac3840fd9_o.png" alt="Front view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
+         <img class="mini-product-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492421_a9746cf717_o.png" alt="Back view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
+         <img class="mini-product-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492411_84456b5c9b_o.png" alt="Closed front view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
+         <div style="text-align:center;">
+           <span class="mini-product-carousel-dots active" onclick="currentSlide(1, this)"></span>
+           <span class="mini-product-carousel-dots" onclick="currentSlide(2, this)"></span>
+           <span class="mini-product-carousel-dots" onclick="currentSlide(3, this)"></span>
+         </div>
+      </div>
+    </div>
+      <div class="mini-product-text-block-2x1">
+         <div class="mini-product-text-2x1">
+           <a href="/24024"><span class="mini-product-text-link"></span></a>
+           <a class="body-title">GEO-SLASHED DRESS<br></a>
+           <br><a class="description-text">Geometrically placed laser slashes reveal the neon underlayer and highlight the figure beneath.</a>
+           <div class="mini-inquire-button">
+             <a class="mini-inquire-button-link" href="/24204">EXPLORE</a>
+           </div>
+           </div>
+       </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/liquid_metal.html">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/52895436619_6331022d5b_o.jpg" alt="Liquid Metal">
+       <div class="gallery-unit-title">
+         <a class="body-title">Liquid Metal</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/paneled_jacket.html">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/52894931815_b03c0780b8_o.jpg" alt="Paneled Jacket">
+       <div class="gallery-unit-title">
+         <a class="body-title">Paneled Jacket</a>
+     </div>
+     </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/retroreflective_jacket.html">
+         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/52895615173_be2c62ab18_o.jpg" alt="Retroreflective Jacket">
+       <div class="gallery-unit-title">
+         <a class="body-title">Retro-Reflective Jacket</a>
+     </div>
+   </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/apollo_bag.html">
+    <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/52222663456_d3e500b858_o.jpg" alt="Apollo Bag">
+    <div class="gallery-unit-title">
+      <a class="body-title">Apollo Bag</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit-1x2">
+    <div class="gallery-unit-mini-product-page-1x2">
+      <div class="carousel-container-1x2">
+      <div class="mini-product-carousel-block">
+        <a class="mini-product-carousel-forward" onclick="plusSlides(1, this)">&#10095;</a>
+        <a class="mini-product-carousel-back" onclick="plusSlides(-1, this)">&#10094;</a>
+         <img class="mini-product-image active" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492711_dac3840fd9_o.png" alt="Front view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
+         <img class="mini-product-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492421_a9746cf717_o.png" alt="Back view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
+         <img class="mini-product-image" onclick="modalfunction(this)" src="https://live.staticflickr.com/65535/53227492411_84456b5c9b_o.png" alt="Closed front view of Yves Valentin silk charmeuse 80s windbreaker bomber jacket with zip front">
+         <div style="text-align:center;">
+           <span class="mini-product-carousel-dots active" onclick="currentSlide(1, this)"></span>
+           <span class="mini-product-carousel-dots" onclick="currentSlide(2, this)"></span>
+           <span class="mini-product-carousel-dots" onclick="currentSlide(3, this)"></span>
+         </div>
+      </div>
+    </div>
+      <div class="mini-product-text-block-1x2">
+         <div class="mini-product-text-1x2">
+           <a href="/24024"><span class="mini-product-text-link"></span></a>
+           <a class="body-title">GEO-SLASHED DRESS<br></a>
+           <a class="secondary-text">Laser-cut fleece with neon underlayer<br></a>
+           <a class="secondary-text">Style number: #24204<br></a>
+           <a class="secondary-title-text" >DESCRIPTION</a>
+           <br><a class="description-text">Geometrically placed laser slashes reveal the neon underlayer and highlight the figure beneath.</a>
+           <div class="mini-inquire-button">
+             <a class="mini-inquire-button-link" href="/24204">EXPLORE</a>
+           </div>
+           </div>
+       </div>
+    </div>
+  </div>
+
+  <div class="gallery-unit">
+    <div class="gallery-unit-image-container">
+    <a class="gallery-link" href="/escher_dress.html">
+          <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/51714781548_ad5f2bff91_k.jpg" alt="Escher Dress">
+        <div class="gallery-unit-title">
+          <a class="body-title">Escher Dress</a>
+      </div>
+      </div>
+   </div>
+
+   <div class="gallery-unit">
+     <div class="gallery-unit-image-container">
+     <a class="gallery-link" href="/lichtenstein_sweater.html">
+          <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/51251205377_b910ed3105_o.jpg" alt="Roy Lichtenstein esque embroidered sweatshirt">
+        </a>
+        <div class="gallery-unit-title">
+          <a class="body-title">Lichtenstein Sweater</a>
+      </div>
+      </div>
+   </div>
+
+   <div class="gallery-unit">
+     <div class="gallery-unit-image-container">
+     <a class="gallery-link" href="/stacked_windbreaker.html">
+          <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/51295914779_ed36fa03cb_o.jpg" alt="Layered microsuede windbreaker">
+        </a>
+        <div class="gallery-unit-title">
+          <a class="body-title">Stacked Windbreaker</a>
+      </div>
+      </div>
+   </div>
+
+   <div class="gallery-unit">
+     <div class="gallery-unit-image-container">
+     <a class="gallery-link" href="/quarantine_capsule.html">
+          <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/51296037064_c6965079d0_o.jpg" alt="Quarantine capsule collection">
+        </a>
+        <div class="gallery-unit-title">
+          <a class="body-title">Quarantine Capsule</a>
+      </div>
+      </div>
+   </div>
+
+   <div class="gallery-unit">
+     <div class="gallery-unit-image-container">
+     <a class="gallery-link" href="/klimt_sweater.html">
+          <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/52222852304_bebeda7908_o.jpg" alt="Klimt sweater">
+        </a>
+        <div class="gallery-unit-title">
+          <a class="body-title">Klimt Sweater</a>
+      </div>
+      </div>
+   </div>
+
+</div>
+<!-- MODAL -->
+<div id="my-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+
+</body>
+
+<div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
+<embed type="text/html" src="footer.html" id="footer">
+
+<!--GRID COLLUMN SCRIPT-->
+  <script>
+    function updateGalleryGridColumns() {
+      const grid = document.querySelector('.gallery-grid');
+      if (!grid) return; // Exit if the element is not found
+
+      const containerWidth = grid.clientWidth;
+      const columnMinWidth = 250;
+      const maxColumns = 4;
+
+      const calculatedColumns = Math.floor(containerWidth / columnMinWidth);
+      const finalColumnCount = Math.max(1, Math.min(calculatedColumns, maxColumns));
+
+      grid.style.gridTemplateColumns = `repeat(${finalColumnCount}, 1fr)`;
+    }
+
+    // Debounce to avoid rapid firing on resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(updateGalleryGridColumns, 100);
+    });
+
+    window.addEventListener('DOMContentLoaded', updateGalleryGridColumns);
+  </script>
+
+<!-- CAROUSEL SCRIPT-->
+<script>
+  let scriptElement; // Variable to hold the script element
+
+  function importScript(url) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = url;
+      script.onload = () => {
+        resolve();
+      };
+      script.onerror = reject;
+      document.head.appendChild(script);
+      scriptElement = script; // Store the script element
+    });
+  }
+
+  function loadScript() {
+    if (!scriptElement) {
+      importScript('mini-carousel.js')
+        .then(() => {
+          // Now that the script is loaded, call updateImageDisplay and other functions if needed
+          updateImageDisplay();
+        })
+        .catch((error) => {
+          console.error('Error importing the script:', error);
+        });
+    }
+  }
+
+  // Load the script initially:
+  loadScript();
+
+  // Also, if you need to update on resize, you can attach:
+  window.addEventListener('resize', () => {
+    // Optionally debounce this:
+    updateImageDisplay();
+  });
+</script>
+
+<!--to prevent resize freezing-->
+<script>
+window.addEventListener("resize", () => {
+  document.body.style.opacity = "0.99";
+  setTimeout(() =>  {
+    document.body.style.opacity = "1";
+  }, 10);
+});
+</script>
+
+<!--modal-->
+<script>
+var modal = document.getElementById('my-modal');
+var modalImg = document.getElementById("modal-image");
+
+function modalfunction(el) {
+  var ImgSrc = el.src;
+  var altText = el.alt;
+  modal.style.display = "block";
+  modalImg.src = ImgSrc;
+  document.body.classList.add('modal-open');
+  document.body.style.overflow = "hidden"; // Disable scrolling when modal is open
+}
+
+function closeModal() {
+  modal.style.display = "none";
+  document.body.classList.remove('modal-open');
+  document.body.style.overflow = ""; // Re-enable scrolling
+
+  // Force browser to apply overflow change
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 10);
+}
+
+// Close modal when clicking outside of the image
+window.onclick = function(event) {
+  if (event.target === modal) {
+      closeModal();
+  }
+};
+
+// Close modal when pressing "Escape"
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+      closeModal();
+  }
+});
+</script>
+
+</html>
