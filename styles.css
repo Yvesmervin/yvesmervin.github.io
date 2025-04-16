@@ -278,7 +278,7 @@ regular 3000 X 3750 (4:5)
       .gallery-unit-image-container:hover .gallery-unit-title{opacity:1; -webkit-transition:1s;}
     }
     @media (pointer:coarse) { /* For mobile phones: */
-      .gallery-unit-title{position:absolute; bottom:0; width:80%; margin:10%; background-color:var(--text-box-color); padding-top:3%; padding-bottom:3%; pointer-events:none;}
+      .gallery-unit-title{position:absolute; bottom:0; width:100%; background-color:var(--text-box-color); padding-top:3%; padding-bottom:3%; pointer-events:none;}
     }
 /*GALLERY INDIVIDUAL PAGES*/
 
