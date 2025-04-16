@@ -490,30 +490,39 @@ TEXT BOX
 <embed type="text/html" src="footer.html" id="footer">
 
 <!--GRID COLLUMN SCRIPT-->
-  <script>
-    function updateGalleryGridColumns() {
-      const grid = document.querySelector('.gallery-grid');
-      if (!grid) return; // Exit if the element is not found
+<script>
+  function updateGalleryGridColumns() {
+    const grid = document.querySelector('.gallery-grid');
+    if (!grid) return; // Exit if the element is not found
 
-      const containerWidth = grid.clientWidth;
-      const columnMinWidth = 250;
-      const maxColumns = 4;
+    const containerWidth = grid.clientWidth;
+    const columnMinWidth = 250;
+    const maxColumns = 4;
 
-      const calculatedColumns = Math.floor(containerWidth / columnMinWidth);
-      const finalColumnCount = Math.max(1, Math.min(calculatedColumns, maxColumns));
+    // Calculate how many columns fit based on min width
+    const calculatedColumns = Math.floor(containerWidth / columnMinWidth);
+    let finalColumnCount = Math.max(1, Math.min(calculatedColumns, maxColumns));
 
-      grid.style.gridTemplateColumns = `repeat(${finalColumnCount}, 1fr)`;
+    // MOBILE OVERRIDE: Force 2 columns on narrow viewports
+    const mobileBreakpoint = 600; // in CSS pixels
+    if (window.innerWidth < mobileBreakpoint) {
+      finalColumnCount = 2;
     }
 
-    // Debounce to avoid rapid firing on resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(updateGalleryGridColumns, 100);
-    });
+    // Apply to the grid
+    grid.style.gridTemplateColumns = `repeat(${finalColumnCount}, 1fr)`;
+  }
 
-    window.addEventListener('DOMContentLoaded', updateGalleryGridColumns);
-  </script>
+  // Debounce to avoid rapid firing on resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(updateGalleryGridColumns, 100);
+  });
+
+  // Initialize on DOM content loaded
+  window.addEventListener('DOMContentLoaded', updateGalleryGridColumns);
+</script>
 
 <!-- CAROUSEL SCRIPT-->
 <script>
