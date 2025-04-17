@@ -185,10 +185,10 @@ body.modal-open {margin:0; background-color:var(--background-color); overflow:hi
 
 /*GALLERY MENU*/
 @media only screen and (min-width: 1000px) { /* adds margin */
-  .gallery-grid{display: grid; grid-auto-flow: dense; background-color:var(--background-color); width: 90%; margin-left: 5%; margin-right: 5%; justify-content:center; position:relative; z-index:5; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
+  .gallery-grid{display: grid; grid-auto-flow: dense; background-color:var(--background-color); width: 90%; margin-left: 5%; margin-right: 5%; padding-bottom:2%; padding-top:2%; justify-content:center; position:relative; z-index:5; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
 }
 @media only screen and (max-width: 999px) { /* no margin */
-  .gallery-grid{display: grid; grid-auto-flow: dense; background-color:var(--background-color); width: 100%; padding-left: 0; padding-right: 0; justify-content:center; position:relative; z-index:5; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
+  .gallery-grid{display: grid; grid-auto-flow: dense; background-color:var(--background-color); width: 100%; padding-left: 0; padding-right: 0; padding-bottom:2%; padding-top:2%; justify-content:center; position:relative; z-index:5; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
 }
 @media only screen and (min-width: 769px) { /* For desktop: */
   .gallery-block{display:flex; flex-flow:row wrap; align-items:stretch; justify-content:center; margin: 0 auto; background-color:var(--background-color); width:var(--portfolio-block-width); max-width:var(--block-max-width); text-align:center; vertical-align:middle; /*overflow:hidden;*/ position:relative; z-index:5; border-bottom-style:solid; border-color:var(--accent-color-2); border-width:var(--border-width);}
@@ -216,29 +216,28 @@ body.modal-open {margin:0; background-color:var(--background-color); overflow:hi
 regular 3000 X 3750 (4:5)
 1X2 Tall 3000 X 8437 (4:10(+20% margin))
 2X1 Wide 6750 X 3750 (8(+20% margin):5)*/
-    .gallery-unit{width:100%; overflow:hidden; aspect-ratio:4/5; overflow: hidden; justify-content:center; text-align:center; vertical-align:middle; position:relative; z-index:5}
+    .gallery-unit{width:100%; overflow:hidden; aspect-ratio:4/5; justify-content:center; text-align:center; vertical-align:middle; position:relative; z-index:5}
     .gallery-unit-2x2{width:100%; overflow:hidden; aspect-ratio:4/5; justify-content:center; text-align:center; vertical-align:middle; position:relative; z-index:5; grid-column: span 2; grid-row: span 2;}
     .gallery-unit-1x2{width:100%; aspect-ratio:4/10;overflow:hidden; justify-content:center; text-align:center; vertical-align:middle; position:relative; z-index:5; grid-column: span 1; grid-row: span 2;}
     .gallery-unit-2x1{width:100%; aspect-ratio:8/5; overflow:hidden; justify-content:center; text-align:center; vertical-align:middle; position:relative; z-index:5; grid-column: span 2; grid-row: span 1;}
-    .gallery-unit-image-container{opacity:1; aspect-ratio:4/5; overflow:hidden; position:relative; width:80%; margin:10%; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
-    .gallery-unit-image{opacity:1; height:100%; width:auto; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
-    .gallery-unit-image-2x2{opacity:1; width:90%; height:auto; margin:5%; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
+    .gallery-unit-image-container{opacity:1; height:84%; overflow:hidden; position:relative; width:80%; margin:10%; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
+    .gallery-unit-image{position: absolute; transform: translateX(-50%); opacity:1; height:100%; width:auto; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
+    .gallery-unit-image-container-2x2{opacity:1; overflow:hidden; position:relative; height:92%; width:auto; margin:5%; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
+    .gallery-unit-image-2x2{opacity:1; height:100%; width:auto; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
     .gallery-unit-image-container-1x2{opacity:1; overflow:hidden; position:relative; height:90%; width:auto; margin:10%; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
     .gallery-unit-image-1x2{opacity:1; height:100%; width:auto; position:absolute; object-fit:cover; top:0; left:50%; transform:translateX(-50%); background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color);}
-    .gallery-unit-image-container-2x1{opacity:1; overflow:hidden; position:relative; width:90%; height:80%; margin:5%; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
+    .gallery-unit-image-container-2x1{opacity:1; overflow:hidden; position:relative; width:90%; height:84%; margin:5%; background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color); -webkit-transition:0.5s;}
     .gallery-unit-image-2x1{opacity:1; width:100%; height:auto; position:absolute; object-fit:cover; top:50%; left:0; transform:translateY(-50%); background-color:var(--secondary-color); box-shadow: 2px 2px 4px var(--background-hover-color);}
-    .gallery-unit-text-box{width:80%; margin:10%; height:80%; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color);}
-    .gallery-unit-text-box-1x2{width:80%; margin:10%; height:90%; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color);}
-    .gallery-unit-text-box-2x1{width:90%; margin:5%; height:80%; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color);}
+    .gallery-unit-text-box{width:80%; margin:10%; height:80%; overflow:hidden; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color);}
+    .gallery-unit-text-box-1x2{width:80%; margin:10%; height:90%; overflow:hidden; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color);}
+    .gallery-unit-text-box-2x1{width:90%; margin:5%; height:84%; overflow:hidden; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color);}
     .gallery-unit-text-container{display:table; width: 100%; height: 100%;}
     .gallery-unit-text{padding:5%; vertical-align: middle; display: table-cell;}
     .gallery-link{height:0px; width:0px;}
 
 /*for mini product page wrapper*/
-    .gallery-unit-mini-product-page-2x1{width:90%; margin:5%; height:80%; overflow:hidden; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color); will-change:transform; transition: transform 1s ease;}
-    .gallery-unit-mini-product-page-2x1:hover{transform: scale(1.05); transition: transform 1s ease;}
+    .gallery-unit-mini-product-page-2x1{width:90%; margin:5%; height:84%; overflow:hidden; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color); will-change:transform; transition: transform 1s ease;}
     .gallery-unit-mini-product-page-1x2{width:80%; margin:10%; height:90%; overflow:hidden; background-color:var(--secondary-color); text-align:center; box-shadow: 2px 2px 4px var(--background-hover-color); will-change:transform; transition: transform 1s ease;}
-    .gallery-unit-mini-product-page-1x2:hover{transform: scale(1.05); transition: transform 1s ease;}
 /*for mini product carousel*/
     .carousel-container-2x1{position:absolute; width:45%; height:auto; padding-bottom:0;}
     .carousel-container-1x2{position:absolute; width:100%; height:50%; padding-bottom:0;}
@@ -253,9 +252,7 @@ regular 3000 X 3750 (4:5)
     .mini-product-image.active{display:block; opacity:1; transform: translateX(0);}
 /*for mini product description*/
     .mini-product-text-block-2x1{position:absolute; width:55%; height:100%; bottom:0; right:0; overflow:hidden;}
-    .mini-product-text-block-1x2{position:absolute; width:100%; right:0; bottom:0; overflow:hidden;}
-    .mini-product-text-2x1{position:relative; width:auto; padding:5%; text-align:center; top: 50%; transform: translateY(-50%);}
-    .mini-product-text-1x2{position:relative; width:auto; padding:5%;}
+    .mini-product-text-block-1x2{position:absolute; width:100%; height:55%; right:0; bottom:0; overflow:hidden;}
     .mini-inquire-button{height:75px; z-index:7; display: flex; bottom:0; justify-content: center; align-items: center;}
     .mini-inquire-button-link{z-index:7; background-color:var(--text-box-color); height: auto; padding-top:5px; padding-bottom:5px; padding-left:60px; padding-right:60px; line-height: 2; font-size:var(--secondary-title-font-size); font-family: var(--font); text-decoration:none; color:var(--font-color); border-style:solid; border-color:var(--background-hover-color); border-width:var(--heavy-border-width); -webkit-transition:1s;}
     .mini-inquire-button-link:hover{background-color:var(--text-box-hover); padding-top:10px; padding-bottom:10px; padding-left:70px; padding-right:70px; color:var(--accent-color-2); border-style:solid; border-color:var(--accent-color-2); border-width:var(--heavy-border-width); -webkit-transition:1s;}
@@ -275,10 +272,21 @@ regular 3000 X 3750 (4:5)
       .gallery-unit-image-container-2x1:hover{transform: scale(1.025); -webkit-transition:1s;}
       .gallery-unit-image-container-1x2:hover .gallery-unit-title{opacity:1; -webkit-transition:1s;}
       .gallery-unit-image-container-2x1:hover .gallery-unit-title{opacity:1; -webkit-transition:1s;}
+      .gallery-unit-image-container-2x2:hover .gallery-unit-title{opacity:1; -webkit-transition:1s;}
       .gallery-unit-image-container:hover .gallery-unit-title{opacity:1; -webkit-transition:1s;}
+      .gallery-unit-mini-product-page-1x2:hover{transform: scale(1.05); transition: transform 1s ease;}
+      .gallery-unit-mini-product-page-2x1:hover{transform: scale(1.05); transition: transform 1s ease;}
+      .mini-product-web-text-2x1{display:block; position:relative; width:auto; padding:5%; text-align:center; top: 50%; transform: translateY(-50%);}
+      .mini-product-mobile-text-2x1{display:none; position:relative; width:auto; padding:5%; text-align:center; top: 50%; transform: translateY(-50%);}
+      .mini-product-web-text-1x2{display:block; position:relative; width:auto; padding:5%; top: 50%; transform: translateY(-50%);}
+      .mini-product-mobile-text-1x2{display:none; position:relative; width:auto; padding:5%; top: 50%; transform: translateY(-50%);}
     }
     @media (pointer:coarse) { /* For mobile phones: */
       .gallery-unit-title{position:absolute; bottom:0; width:100%; background-color:var(--text-box-color); padding-top:3%; padding-bottom:3%; pointer-events:none;}
+      .mini-product-web-text-2x1{display:none; position:relative; width:auto; padding:5%; text-align:center; top: 50%; transform: translateY(-50%);}
+      .mini-product-mobile-text-2x1{display:block; position:relative; width:auto; padding:5%; text-align:center; top: 50%; transform: translateY(-50%);}
+      .mini-product-web-text-1x2{display:none; position:relative; width:auto; padding:5%; top: 50%; transform: translateY(-50%);}
+      .mini-product-mobile-text-1x2{display:block; position:relative; width:auto; padding:5%; top: 50%; transform: translateY(-50%);}
     }
 /*GALLERY INDIVIDUAL PAGES*/
 

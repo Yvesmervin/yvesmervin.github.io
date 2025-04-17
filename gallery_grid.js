@@ -1,31 +1,51 @@
-function updateGalleryGridColumns() {
-    const grid = document.querySelector('.gallery-grid');
-    if (!grid) return; // Exit if the element is not found
+// gallery-grid.js
 
-    const containerWidth = grid.clientWidth;
-    const columnMinWidth = 250;
-    const maxColumns = 4;
+(function() {
+  // --- Configuration ---
+  const columnMinWidth = 250;  // minimum width per column in CSS‑px
+  const maxColumns     = 4;    // maximum number of columns
+  const mobileBP       = 600;  // viewport width (CSS‑px) below which we force 2 columns
 
-    // Calculate how many columns fit based on min width
-    const calculatedColumns = Math.floor(containerWidth / columnMinWidth);
-    let finalColumnCount = Math.max(1, Math.min(calculatedColumns, maxColumns));
+  /**
+   * Calculate and apply the correct number of columns
+   * for a single .gallery-grid element.
+   *
+   * @param {HTMLElement} grid
+   */
+  function updateOneGrid(grid) {
+    // How wide is this grid, in CSS pixels?
+    const w = grid.clientWidth;
 
-    // MOBILE OVERRIDE: Force 2 columns on narrow viewports
-    const mobileBreakpoint = 600; // in CSS pixels
-    if (window.innerWidth < mobileBreakpoint) {
-      finalColumnCount = 2;
+    // How many columns can we fit at our min width?
+    let cols = Math.floor(w / columnMinWidth);
+
+    // Clamp between 1 and maxColumns
+    cols = Math.max(1, Math.min(cols, maxColumns));
+
+    // If we're on a narrow (mobile) viewport, force 2 columns
+    if (window.innerWidth < mobileBP) {
+      cols = 2;
     }
 
-    // Apply to the grid
-    grid.style.gridTemplateColumns = `repeat(${finalColumnCount}, 1fr)`;
+    // Apply the CSS grid-template-columns rule
+    grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
   }
 
-  // Debounce to avoid rapid firing on resize
+  /**
+   * Find every .gallery-grid on the page and update it.
+   */
+  function updateAllGrids() {
+    const all = document.querySelectorAll('.gallery-grid');
+    all.forEach(updateOneGrid);
+  }
+
+  // Debounced resize handling
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(updateGalleryGridColumns, 100);
+    resizeTimeout = setTimeout(updateAllGrids, 100);
   });
 
-  // Initialize on DOM content loaded
-  window.addEventListener('DOMContentLoaded', updateGalleryGridColumns);
+  // Initial setup on DOMContentLoaded
+  window.addEventListener('DOMContentLoaded', updateAllGrids);
+})();
