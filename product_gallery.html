@@ -14,6 +14,8 @@
 <meta name="author" content="Yves Mervin-Leroy">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
+<script src="gallery_grid.js" defer></script>
+
 </head>
 
 
@@ -171,6 +173,56 @@ TEXT BOX
 -->
 <div class="gallery-grid">
 
+<div class="gallery-unit">
+  <div class="gallery-unit-image-container">
+  <a class="gallery-link" href="/25105">
+       <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54505832891_c01f67b052_o.png">
+     <div class="gallery-unit-title">
+       <a class="body-title">Sari Cowl Dress</a>
+   </div>
+   </div>
+</div>
+
+<div class="gallery-unit">
+  <div class="gallery-unit-image-container">
+  <a class="gallery-link" href="/24201">
+       <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54408444337_54fc56696e_o.png">
+     <div class="gallery-unit-title">
+       <a class="body-title">Sari Shirt</a>
+   </div>
+   </div>
+</div>
+
+<div class="gallery-unit">
+  <div class="gallery-unit-image-container">
+  <a class="gallery-link" href="/24201">
+       <img class="gallery-unit-image" src="https://raw.githubusercontent.com/Yvesmervin/YVIMAGE/main/25108/25108_F3.png">
+     <div class="gallery-unit-title">
+       <a class="body-title">Mini Sari Dress</a>
+   </div>
+   </div>
+</div>
+
+<div class="gallery-unit">
+  <div class="gallery-unit-image-container">
+  <a class="gallery-link" href="/25109">
+       <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54512256580_1fa07b196f_o.png">
+     <div class="gallery-unit-title">
+       <a class="body-title">Sari Shirt</a>
+   </div>
+   </div>
+</div>
+
+<div class="gallery-unit">
+  <div class="gallery-unit-image-container">
+  <a class="gallery-link" href="/25106">
+       <img class="gallery-unit-image" src="https://raw.githubusercontent.com/Yvesmervin/YVIMAGE/main/25106/25106_S2.png">
+     <div class="gallery-unit-title">
+       <a class="body-title">Sari Hankie Dress</a>
+   </div>
+   </div>
+</div>
+
   <div class="gallery-unit">
     <div class="gallery-unit-image-container">
     <a class="gallery-link" href="/24210">
@@ -267,16 +319,6 @@ TEXT BOX
          <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54408461102_fccf8d7263_o.png">
        <div class="gallery-unit-title">
          <a class="body-title">Geo-Slashed Dress</a>
-     </div>
-     </div>
-  </div>
-
-  <div class="gallery-unit">
-    <div class="gallery-unit-image-container">
-    <a class="gallery-link" href="/24201">
-         <img class="gallery-unit-image" src="https://live.staticflickr.com/65535/54408444337_54fc56696e_o.png">
-       <div class="gallery-unit-title">
-         <a class="body-title">Sari Shirt</a>
      </div>
      </div>
   </div>
@@ -575,41 +617,6 @@ TEXT BOX
 
 <div class="footer-padding"></div> <!--PADDING FOR FOOTER-->
 <embed type="text/html" src="footer.html" id="footer">
-
-<!--GRID COLLUMN SCRIPT-->
-<script>
-  function updateGalleryGridColumns() {
-    const grid = document.querySelector('.gallery-grid');
-    if (!grid) return; // Exit if the element is not found
-
-    const containerWidth = grid.clientWidth;
-    const columnMinWidth = 250;
-    const maxColumns = 4;
-
-    // Calculate how many columns fit based on min width
-    const calculatedColumns = Math.floor(containerWidth / columnMinWidth);
-    let finalColumnCount = Math.max(1, Math.min(calculatedColumns, maxColumns));
-
-    // MOBILE OVERRIDE: Force 2 columns on narrow viewports
-    const mobileBreakpoint = 600; // in CSS pixels
-    if (window.innerWidth < mobileBreakpoint) {
-      finalColumnCount = 2;
-    }
-
-    // Apply to the grid
-    grid.style.gridTemplateColumns = `repeat(${finalColumnCount}, 1fr)`;
-  }
-
-  // Debounce to avoid rapid firing on resize
-  let resizeTimeout;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(updateGalleryGridColumns, 100);
-  });
-
-  // Initialize on DOM content loaded
-  window.addEventListener('DOMContentLoaded', updateGalleryGridColumns);
-</script>
 
 <!-- CAROUSEL SCRIPT-->
 <script>
